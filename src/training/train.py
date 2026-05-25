@@ -53,6 +53,7 @@ from sklearn.metrics import (
     precision_recall_curve,
 )
 from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline as SKPipeline
 from xgboost import XGBClassifier
 
 load_dotenv()
@@ -234,17 +235,18 @@ def _log_fig(fig: plt.Figure | None, name: str) -> None:
 # Single-model training + MLflow logging
 # -----------------------------------------------------------------------------
 def train_and_log(
-    model_name:      str,
+    model_name:       str,
     model,
-    X_train:         np.ndarray,
-    y_train:         np.ndarray,
-    X_val:           np.ndarray,
-    y_val:           np.ndarray,
-    X_test:          np.ndarray,
-    y_test:          np.ndarray,
-    feature_names:   list[str],
-    extra_params:    dict,
-    run_tags:        dict,
+    X_train:          np.ndarray,
+    y_train:          np.ndarray,
+    X_val:            np.ndarray,
+    y_val:            np.ndarray,
+    X_test:           np.ndarray,
+    y_test:           np.ndarray,
+    feature_names:    list[str],
+    extra_params:     dict,
+    run_tags:         dict,
+    preproc_pipeline=None,   # sklearn Pipeline; if given, saves full preprocess+model pipeline
 ) -> tuple[ModelMetrics, ModelMetrics, str]:
     """
     Fit model, evaluate on val + test, log everything to MLflow.
@@ -310,6 +312,16 @@ def train_and_log(
 
         # -- Log model ---------------------------------------------------------
         mlflow.sklearn.log_model(model, artifact_path="model")
+
+        # Save full preprocess+model pipeline so serving can call predict_proba
+        # on raw DataFrames without needing to apply the scaler/OHE separately.
+        if preproc_pipeline is not None:
+            full_pipe = SKPipeline([
+                ("preprocess", preproc_pipeline),
+                ("model", model),
+            ])
+            mlflow.sklearn.log_model(full_pipe, artifact_path="full_pipeline")
+            log.info("Logged full_pipeline (preprocess+model) to MLflow artifact path 'full_pipeline'")
 
         log.info(
             "%s | val PR-AUC %.4f | val F1 %.4f | test PR-AUC %.4f",
@@ -399,17 +411,18 @@ def main() -> None:
         random_state=args.seed,
     )
     baseline_val_m, baseline_test_m, baseline_run_id = train_and_log(
-        model_name    = "LogisticRegression_baseline",
-        model         = lr,
-        X_train       = X_train_t,
-        y_train       = y_train_np,
-        X_val         = X_val_t,
-        y_val         = y_val_np,
-        X_test        = X_test_t,
-        y_test        = y_test_np,
-        feature_names = feature_names,
-        extra_params  = {"C": 1.0, "class_weight": "balanced", "max_iter": 1000},
-        run_tags      = {**shared_tags, "model_type": "LogisticRegression"},
+        model_name        = "LogisticRegression_baseline",
+        model             = lr,
+        X_train           = X_train_t,
+        y_train           = y_train_np,
+        X_val             = X_val_t,
+        y_val             = y_val_np,
+        X_test            = X_test_t,
+        y_test            = y_test_np,
+        feature_names     = feature_names,
+        extra_params      = {"C": 1.0, "class_weight": "balanced", "max_iter": 1000},
+        run_tags          = {**shared_tags, "model_type": "LogisticRegression"},
+        preproc_pipeline  = pipe,
     )
 
     # -- Improved: XGBoost -----------------------------------------------------
@@ -425,21 +438,22 @@ def main() -> None:
         random_state     = args.seed,
     )
     improved_val_m, improved_test_m, improved_run_id = train_and_log(
-        model_name    = "XGBoost_improved",
-        model         = xgb,
-        X_train       = X_train_t,
-        y_train       = y_train_np,
-        X_val         = X_val_t,
-        y_val         = y_val_np,
-        X_test        = X_test_t,
-        y_test        = y_test_np,
-        feature_names = feature_names,
-        extra_params  = {
+        model_name        = "XGBoost_improved",
+        model             = xgb,
+        X_train           = X_train_t,
+        y_train           = y_train_np,
+        X_val             = X_val_t,
+        y_val             = y_val_np,
+        X_test            = X_test_t,
+        y_test            = y_test_np,
+        feature_names     = feature_names,
+        extra_params      = {
             "n_estimators": 300, "max_depth": 5, "learning_rate": 0.05,
             "subsample": 0.8, "colsample_bytree": 0.8,
             "scale_pos_weight": round(neg_pos, 2),
         },
-        run_tags      = {**shared_tags, "model_type": "XGBoostClassifier"},
+        run_tags          = {**shared_tags, "model_type": "XGBoostClassifier"},
+        preproc_pipeline  = pipe,
     )
 
     # -- Gate: baseline vs improved --------------------------------------------
@@ -465,25 +479,25 @@ def main() -> None:
             learning_rate    = 0.1,
             scale_pos_weight = neg_pos,
             eval_metric      = "aucpr",
-            use_label_encoder= False,
             verbosity        = 0,
             random_state     = args.seed,
         )
         stump_val_m, stump_test_m, stump_run_id = train_and_log(
-            model_name    = "XGBoost_stump_depth1",
-            model         = stump,
-            X_train       = X_train_t,
-            y_train       = y_train_np,
-            X_val         = X_val_t,
-            y_val         = y_val_np,
-            X_test        = X_test_t,
-            y_test        = y_test_np,
-            feature_names = feature_names,
-            extra_params  = {
+            model_name        = "XGBoost_stump_depth1",
+            model             = stump,
+            X_train           = X_train_t,
+            y_train           = y_train_np,
+            X_val             = X_val_t,
+            y_val             = y_val_np,
+            X_test            = X_test_t,
+            y_test            = y_test_np,
+            feature_names     = feature_names,
+            extra_params      = {
                 "n_estimators": 100, "max_depth": 1, "learning_rate": 0.1,
                 "scale_pos_weight": round(neg_pos, 2),
             },
-            run_tags      = {**shared_tags, "model_type": "XGBoostClassifier_stump"},
+            run_tags          = {**shared_tags, "model_type": "XGBoostClassifier_stump"},
+            preproc_pipeline  = pipe,
         )
         gate_stump = promotion_gate(baseline_val_m, stump_val_m)
         print_gate_result(
