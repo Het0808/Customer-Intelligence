@@ -20,7 +20,6 @@ from src.data_pipeline.features import (
     OHE_COLS,
     PDAYS_NOT_CONTACTED,
     SCALE_COLS,
-    TARGET_MAP,
     add_business_features,
     build_preprocessing_pipeline,
     encode_categoricals,
@@ -286,9 +285,8 @@ class TestPreprocessingPipeline:
         Standard deviation of a scaled column must be ~1 on training data.
         This fails if the scaler was accidentally fit on test data.
         """
-        df_train = self._make_dataset(200)
-        df_test  = self._make_dataset(50)
-        pipe = build_preprocessing_pipeline()
+        df_train  = self._make_dataset(200)
+        pipe      = build_preprocessing_pipeline()
         pipe.fit(df_train)
         train_out = pipe.transform(df_train)
         # Each scaled column should have mean≈0, std≈1 ON training data
@@ -317,3 +315,41 @@ class TestPreprocessingPipeline:
         out = pipe.transform(df)
         names = get_feature_names(pipe)
         assert len(names) == out.shape[1]
+
+    def test_null_input_is_not_silently_imputed(self):
+        """
+        NaN in a numeric column must propagate through the pipeline as NaN,
+        NOT be replaced with a training-set mean.
+
+        sklearn >= 1.4 StandardScaler uses force_all_finite='allow-nan' in
+        transform(), so it does not raise -- it preserves the NaN.  This is
+        intentional: the pipeline has no SimpleImputer, which means null inputs
+        must be caught UPSTREAM (by the Pydantic schema) before they reach the
+        feature pipeline.  If the pipeline silently imputed, that guarantee
+        would be broken.
+        """
+        df_train = self._make_dataset(50)
+        df_test  = _df()
+        df_test  = df_test.astype({"age": float})
+        df_test.loc[0, "age"] = float("nan")   # inject NaN into a scaled column
+        pipe = build_preprocessing_pipeline()
+        pipe.fit(df_train)
+        out = pipe.transform(df_test)
+        # NaN must survive into the output matrix -- not be silently imputed.
+        assert np.isnan(out).any(), (
+            "Pipeline must propagate NaN rather than impute it; "
+            "upstream Pydantic validation is the null guard."
+        )
+
+    def test_single_row_and_batch_produce_same_feature_width(self):
+        """
+        A 1-row DataFrame must produce the same number of columns as a batch --
+        verifies that the OHE categories are fixed at fit time, not inferred
+        from the number of rows being transformed.
+        """
+        df = self._make_dataset(20)
+        pipe = build_preprocessing_pipeline()
+        pipe.fit(df)
+        single = pipe.transform(df.iloc[[0]])
+        batch  = pipe.transform(df)
+        assert single.shape == (1, batch.shape[1])

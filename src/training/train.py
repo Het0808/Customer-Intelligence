@@ -29,9 +29,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import io
 import logging
-import os
 import sys
 from pathlib import Path
 
@@ -71,7 +69,6 @@ sys.path.insert(0, str(_ROOT))
 from src.config import (
     MLFLOW_EXPERIMENT_NAME,
     MLFLOW_TRACKING_URI,
-    PROCESSED_DIR,
     RAW_DIR,
     SAMPLES_DIR,
 )
@@ -82,7 +79,6 @@ from src.data_pipeline.features import (
 )
 from src.training.evaluate import (
     ModelMetrics,
-    business_reading,
     compute_metrics,
     print_business_report,
     print_gate_result,
@@ -536,7 +532,7 @@ def main() -> None:
 
     # -- Summary ---------------------------------------------------------------
     print(f"\n{'-' * 62}")
-    print(f"  SUMMARY")
+    print("  SUMMARY")
     print(f"{'-' * 62}")
     print(f"  Baseline  run_id: {baseline_run_id}")
     print(f"  Improved  run_id: {improved_run_id}")

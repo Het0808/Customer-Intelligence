@@ -14,7 +14,6 @@ import pandas as pd
 import pytest
 
 from src.data_pipeline.validate import (
-    BANK_SCHEMA,
     VALID_JOBS,
     inject_bad_records,
     validate,

@@ -52,7 +52,6 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import os
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -289,7 +288,7 @@ def run_eval(
 def print_report(results: list[EvalResult], top_k: int) -> None:
     w = 70
     print(f"\n{'=' * w}")
-    print(f"  RAG Evaluation Report -- Customer Intelligence Platform")
+    print("  RAG Evaluation Report -- Customer Intelligence Platform")
     print(f"  Threshold: {MIN_SCORE_THRESHOLD}  |  top_k: {top_k}")
     print(f"{'=' * w}\n")
 
@@ -300,11 +299,10 @@ def print_report(results: list[EvalResult], top_k: int) -> None:
         if r.expected_ids:
             print(f"    Expected IDs : {r.expected_ids}")
         if r.retrieved_ids:
-            scored = list(zip(r.retrieved_ids, [f"{r.max_score:.3f}"] + ["..."] * (len(r.retrieved_ids) - 1)))
             print(f"    Retrieved    : {r.retrieved_ids[:5]}")
             print(f"    Max score    : {r.max_score:.4f}")
         else:
-            print(f"    Retrieved    : (none -- refusal or no candidates)")
+            print("    Retrieved    : (none -- refusal or no candidates)")
         print(f"    Result       : {r.reason}")
         print()
 

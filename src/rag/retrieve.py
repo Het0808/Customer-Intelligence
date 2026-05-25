@@ -188,9 +188,9 @@ class Retriever:
         if candidate_idx is None:
             # No filter -- search full index directly (fast path)
             k      = min(top_k, self._index.ntotal)
-            D, I   = self._index.search(q_vec, k)
-            scores = D[0]
-            local_idxs = I[0]
+            D, idx_arr = self._index.search(q_vec, k)
+            scores     = D[0]
+            local_idxs = idx_arr[0]
             # local_idxs are already original docstore indices for the full index
             orig_map   = {j: j for j in range(len(self._docstore))}
         else:
@@ -202,10 +202,10 @@ class Retriever:
             mini   = faiss.IndexFlatIP(self._dim)
             mini.add(cand_vecs)
 
-            k      = min(top_k, len(candidate_idx))
-            D, I   = mini.search(q_vec, k)
+            k          = min(top_k, len(candidate_idx))
+            D, idx_arr = mini.search(q_vec, k)
             scores     = D[0]
-            local_idxs = I[0]
+            local_idxs = idx_arr[0]
             orig_map   = {local: orig for local, orig in enumerate(candidate_idx)}
 
         # ── Stage 4: refusal gate ─────────────────────────────────────────────

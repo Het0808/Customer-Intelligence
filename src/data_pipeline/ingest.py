@@ -22,7 +22,6 @@ import io
 import logging
 import os
 import random
-import sys
 import zipfile
 from pathlib import Path
 

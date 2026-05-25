@@ -28,10 +28,8 @@ from dataclasses import dataclass
 from typing import NamedTuple
 
 import numpy as np
-import pandas as pd
 from sklearn.metrics import (
     average_precision_score,
-    confusion_matrix,
     f1_score,
     precision_recall_curve,
     roc_auc_score,
@@ -186,8 +184,6 @@ def business_reading(
     pct_contacted   = flagged / n
     recall          = tp / max(n_pos, 1)
     prec            = tp / max(flagged, 1)
-    random_baseline = n_pos / n
-
     return {
         "threshold":                   round(float(threshold), 4),
         "pct_contacted":               round(float(pct_contacted) * 100, 1),

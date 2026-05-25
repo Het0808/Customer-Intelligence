@@ -15,3 +15,13 @@ include = ["src*"]
 # Adds project root to sys.path so "from src.x import y" works in tests
 pythonpath = ["."]
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+# E/F/W subset: style, undefined names, unused imports.
+# E501 (line-length) -- many long comment blocks are intentional.
+# E402 (module-import-not-at-top) -- sys.path.insert before project imports is intentional.
+select  = ["E", "F", "W"]
+ignore  = ["E501", "E402"]
