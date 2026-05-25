@@ -134,3 +134,49 @@ class ComplaintAnswer(BaseModel):
     evidence_sufficiency: str              # "sufficient" | "insufficient"
     prompt_version:       str
     refusal:              bool
+
+
+# -----------------------------------------------------------------------------
+# Customer Intelligence (combined ML + RAG) schemas
+# -----------------------------------------------------------------------------
+class CustomerIntelRequest(BaseModel):
+    """
+    Input for POST /customer-intel.
+
+    Combines the ML feature vector with optional RAG filters so both pipelines
+    run in a single round-trip.  Filters are forwarded to the FAISS retriever;
+    a null filter means "search all complaints for this customer type".
+    """
+    customer_features: CustomerFeatures
+    product:           str | None = Field(None, description="CFPB product filter for complaint retrieval")
+    issue:             str | None = Field(None, description="CFPB issue filter for complaint retrieval")
+    date_from:         str | None = Field(None, description="Earliest complaint date (YYYY-MM-DD)")
+
+
+class ComplaintTheme(BaseModel):
+    """
+    A single complaint theme derived from retrieved CFPB chunks.
+
+    Themes are produced by grouping retrieved chunks by their issue-metadata
+    field (CFPB taxonomy), so they come directly from the corpus -- never
+    invented by an LLM.  When all chunks share the same issue, the fallback
+    groups by the most frequent non-trivial keyword in the chunk texts.
+    """
+    theme:                str        # issue label or top keyword
+    evidence_ids:         list[str]  # complaint_ids that contributed to this theme
+    representative_chunk: str        # highest-scoring chunk text (truncated to 300 chars)
+
+
+class CustomerIntelResponse(BaseModel):
+    """
+    Output for POST /customer-intel.
+
+    Combines the ML conversion score with the RAG complaint themes so the
+    caller gets a full customer intelligence profile in one response.
+    """
+    conversion_band:        Literal["high", "medium", "low"]
+    conversion_probability: float
+    model_version:          str
+    complaint_themes:       list[ComplaintTheme]   # empty list if RAG unavailable
+    index_version:          str                    # FAISS index timestamp
+    latency_ms:             float
