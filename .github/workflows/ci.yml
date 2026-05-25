@@ -42,8 +42,17 @@ jobs:
             echo "OK: Bad records correctly rejected by schema."
           fi
 
+      # ── Phase 2: training smoke test (500-row sample, fast) ──────────────
+      # Trains LR + XGBoost on the committed sample. Gate PROMOTED exit=0.
+      - name: Train models on sample (expect PROMOTED → exit 0)
+        env:
+          DATA_DIR: ${{ github.workspace }}/data
+          MLFLOW_TRACKING_URI: file:${{ github.workspace }}/mlruns
+        run: python -m src.training.train --sample
+
       # ── Unit tests ────────────────────────────────────────────────────────
       - name: Run pytest
         env:
           DATA_DIR: ${{ github.workspace }}/data
+          MLFLOW_TRACKING_URI: file:${{ github.workspace }}/mlruns
         run: pytest tests/ -v --tb=short --cov=src --cov-report=term-missing

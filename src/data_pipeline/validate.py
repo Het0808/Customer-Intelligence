@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Data validation for Customer Intelligence Platform — Bank Marketing dataset.
+Data validation for Customer Intelligence Platform -- Bank Marketing dataset.
 
 Enforces:
   • Column presence and dtype
@@ -10,8 +10,8 @@ Enforces:
     non-negative counters, economic indicator ranges, binary target)
 
 Exit codes:
-  0 — validation passed
-  1 — one or more checks failed  (also used for config/IO errors)
+  0 -- validation passed
+  1 -- one or more checks failed  (also used for config/IO errors)
 
 Usage:
     python -m src.data_pipeline.validate              # validate raw data
@@ -48,9 +48,9 @@ SAMPLES_DIR   = Path(os.getenv("SAMPLES_DATA_DIR",   _BASE / "samples"))
 BANK_RAW_FILE    = RAW_DIR    / "bank_marketing" / "bank-additional-full.csv"
 BANK_SAMPLE_FILE = SAMPLES_DIR / "bank_marketing_sample.csv"
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Controlled vocabularies  (sourced from UCI bank-additional-names.txt)
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 VALID_JOBS = frozenset({
     "admin.", "blue-collar", "entrepreneur", "housemaid",
     "management", "retired", "self-employed", "services",
@@ -69,28 +69,28 @@ VALID_POUTCOME   = frozenset({"failure", "nonexistent", "success"})
 VALID_YESNO_UNK  = frozenset({"no", "yes", "unknown"})
 VALID_TARGET     = frozenset({"no", "yes"})
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Pandera schema
 #
 # coerce=True: convert column dtypes before checking so that CSV int columns
 # read as float64 (due to missing-value upcasting) still pass type checks.
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 BANK_SCHEMA = DataFrameSchema(
     coerce=True,
     columns={
-        # ── Demographics ──────────────────────────────────────────────────────
+        # -- Demographics ------------------------------------------------------
         "age": Column(
             int,
             checks=[
-                Check.greater_than_or_equal_to(17),   # Rule 1a — youngest in UCI data
-                Check.less_than_or_equal_to(98),       # Rule 1b — oldest in UCI data
+                Check.greater_than_or_equal_to(17),   # Rule 1a -- youngest in UCI data
+                Check.less_than_or_equal_to(98),       # Rule 1b -- oldest in UCI data
             ],
             nullable=False,
             description="Client age in years",
         ),
         "job": Column(
             str,
-            checks=Check.isin(VALID_JOBS),             # Rule 2 — UCI controlled vocab
+            checks=Check.isin(VALID_JOBS),             # Rule 2 -- UCI controlled vocab
             nullable=False,
         ),
         "marital": Column(
@@ -107,41 +107,41 @@ BANK_SCHEMA = DataFrameSchema(
         "housing": Column(str, checks=Check.isin(VALID_YESNO_UNK), nullable=False),
         "loan":    Column(str, checks=Check.isin(VALID_YESNO_UNK), nullable=False),
 
-        # ── Contact campaign ──────────────────────────────────────────────────
+        # -- Contact campaign --------------------------------------------------
         "contact":      Column(str, checks=Check.isin(VALID_CONTACT), nullable=False),
         "month":        Column(str, checks=Check.isin(VALID_MONTHS),  nullable=False),
         "day_of_week":  Column(str, checks=Check.isin(VALID_DAYS),    nullable=False),
         "duration": Column(
             int,
-            checks=Check.greater_than_or_equal_to(0), # Rule 5 — call duration ≥ 0 s
+            checks=Check.greater_than_or_equal_to(0), # Rule 5 -- call duration ≥ 0 s
             nullable=False,
             description="Last contact duration in seconds",
         ),
         "campaign": Column(
             int,
-            checks=Check.greater_than_or_equal_to(1), # Rule 6 — at least 1 contact made
+            checks=Check.greater_than_or_equal_to(1), # Rule 6 -- at least 1 contact made
             nullable=False,
             description="Number of contacts during this campaign",
         ),
         "pdays": Column(
             int,
-            checks=Check.greater_than_or_equal_to(-1),# Rule 7 — -1 = not previously contacted
+            checks=Check.greater_than_or_equal_to(-1),# Rule 7 -- -1 = not previously contacted
             nullable=False,
             description="Days since last contact from previous campaign (-1 = never)",
         ),
         "previous": Column(
             int,
-            checks=Check.greater_than_or_equal_to(0), # Rule 8 — non-negative prior contacts
+            checks=Check.greater_than_or_equal_to(0), # Rule 8 -- non-negative prior contacts
             nullable=False,
         ),
         "poutcome": Column(str, checks=Check.isin(VALID_POUTCOME), nullable=False),
 
-        # ── Economic indicators ───────────────────────────────────────────────
+        # -- Economic indicators -----------------------------------------------
         "emp.var.rate":   Column(float, nullable=False),
         "cons.price.idx": Column(
             float,
             checks=[
-                Check.greater_than_or_equal_to(92.0), # Rule 9a — realistic CPI band
+                Check.greater_than_or_equal_to(92.0), # Rule 9a -- realistic CPI band
                 Check.less_than_or_equal_to(95.0),    # Rule 9b   (UCI range: 92.2–94.8)
             ],
             nullable=False,
@@ -151,16 +151,16 @@ BANK_SCHEMA = DataFrameSchema(
         "nr.employed": Column(
             float,
             checks=[
-                Check.greater_than_or_equal_to(4000.0), # Rule 10a — realistic NE band
+                Check.greater_than_or_equal_to(4000.0), # Rule 10a -- realistic NE band
                 Check.less_than_or_equal_to(6000.0),    # Rule 10b  (UCI range: 4963–5228)
             ],
             nullable=False,
         ),
 
-        # ── Target ────────────────────────────────────────────────────────────
+        # -- Target ------------------------------------------------------------
         "y": Column(
             str,
-            checks=Check.isin(VALID_TARGET),           # Rule 11 — binary, no 'unknown'
+            checks=Check.isin(VALID_TARGET),           # Rule 11 -- binary, no 'unknown'
             nullable=False,
             description="Campaign subscription outcome",
         ),
@@ -169,15 +169,15 @@ BANK_SCHEMA = DataFrameSchema(
         # DataFrame-level: zero duplicate rows
         Check(
             lambda df: not df.duplicated().any(),
-            error="Duplicate rows detected — dedup before training",
+            error="Duplicate rows detected -- dedup before training",
         ),
     ],
 )
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # I/O
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def load_bank_data(use_sample: bool = False) -> pd.DataFrame:
     """
     Load the Bank Marketing dataset.
@@ -207,18 +207,18 @@ def load_bank_data(use_sample: bool = False) -> pd.DataFrame:
     return pd.read_csv(path, sep=sep)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Bad-record injection (demo + CI smoke test)
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def inject_bad_records(df: pd.DataFrame) -> pd.DataFrame:
     """
     Append one deliberately invalid row to *df*.
 
     Violations injected:
-      • age = 150        → Rule 1b (> 98)
-      • job = "hacker"   → Rule 2 (not in vocabulary)
-      • campaign = 0     → Rule 6 (must be ≥ 1)
-      • y = "maybe"      → Rule 11 (not in {yes, no})
+      • age = 150        -> Rule 1b (> 98)
+      • job = "hacker"   -> Rule 2 (not in vocabulary)
+      • campaign = 0     -> Rule 6 (must be ≥ 1)
+      • y = "maybe"      -> Rule 11 (not in {yes, no})
     """
     bad_row = {
         "age": 150,           # violates Rule 1b
@@ -250,16 +250,16 @@ def inject_bad_records(df: pd.DataFrame) -> pd.DataFrame:
     return pd.concat([df, pd.DataFrame([bad_row])], ignore_index=True)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Validation runner
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def validate(df: pd.DataFrame) -> bool:
     """
     Run all checks against *df*.
     Returns True on pass, False on failure.
     Prints a human-readable failure_cases table when checks fail.
     """
-    log.info("Validating %d rows × %d columns …", *df.shape)
+    log.info("Validating %d rows x %d columns …", *df.shape)
 
     # Pre-flight null report (gives cleaner context than Pandera's default message)
     null_counts = df.isnull().sum()
@@ -270,18 +270,18 @@ def validate(df: pd.DataFrame) -> bool:
     try:
         # lazy=True collects ALL failures instead of stopping at the first
         BANK_SCHEMA.validate(df, lazy=True)
-        log.info("✓  All checks passed.")
+        log.info("[OK]  All checks passed.")
         return True
     except pa.errors.SchemaErrors as exc:
         n = len(exc.failure_cases)
-        log.error("✗  Validation FAILED — %d failure case(s):", n)
+        log.error("[X]  Validation FAILED -- %d failure case(s):", n)
         print(exc.failure_cases.to_string(index=False))
         return False
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # CLI
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description=__doc__,

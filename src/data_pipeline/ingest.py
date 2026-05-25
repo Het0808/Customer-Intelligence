@@ -5,10 +5,10 @@ Data ingestion for Customer Intelligence Platform.
 Downloads:
   1. UCI Bank Marketing dataset  (bank-additional-full.csv, ~41 k rows)
   2. CFPB Consumer Complaint sample (10 000 records)
-     Priority: CFPB Elasticsearch API → bulk CSV → synthetic fallback
+     Priority: CFPB Elasticsearch API -> bulk CSV -> synthetic fallback
 
 Then writes 500-row committed samples to data/samples/ for CI and quick
-local testing — no network required after the first run.
+local testing -- no network required after the first run.
 
 Usage:
     python -m src.data_pipeline.ingest
@@ -40,10 +40,10 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Config — every value is overridable via .env or the environment.
+# -----------------------------------------------------------------------------
+# Config -- every value is overridable via .env or the environment.
 # Never hard-code paths in downstream modules; import from src.config instead.
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 UCI_ZIP_URL = os.getenv(
     "UCI_BANK_URL",
     "https://archive.ics.uci.edu/ml/machine-learning-databases/00222/bank-additional.zip",
@@ -60,7 +60,7 @@ CFPB_API_URLS = [
     ).split(",")
     if url.strip()
 ]
-# Bulk CSV fallback — may be a large file; we stream and sample.
+# Bulk CSV fallback -- may be a large file; we stream and sample.
 CFPB_BULK_CSV_URL = os.getenv(
     "CFPB_BULK_CSV_URL",
     "https://files.consumerfinance.gov/f/documents/cfpb_complaints.csv.zip",
@@ -82,9 +82,9 @@ BANK_SAMPLE_FILE = SAMPLES_DIR / "bank_marketing_sample.csv"
 CFPB_SAMPLE_FILE = SAMPLES_DIR / "cfpb_sample.csv"
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Helpers
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def _ensure_dirs() -> None:
     for d in (
         RAW_DIR / "bank_marketing",
@@ -108,14 +108,14 @@ def _download_bytes(url: str, desc: str) -> bytes:
     return buf.getvalue()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # UCI Bank Marketing
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def ingest_bank_marketing(force: bool = False) -> pd.DataFrame:
     """Download and extract the UCI Bank Marketing full dataset."""
     if BANK_RAW_FILE.exists() and not force:
         log.info(
-            "Bank Marketing already at %s — skipping (--force to re-download)",
+            "Bank Marketing already at %s -- skipping (--force to re-download)",
             BANK_RAW_FILE,
         )
         return pd.read_csv(BANK_RAW_FILE, sep=";")
@@ -132,19 +132,19 @@ def ingest_bank_marketing(force: bool = False) -> pd.DataFrame:
 
     BANK_RAW_FILE.parent.mkdir(parents=True, exist_ok=True)
     BANK_RAW_FILE.write_text(content, encoding="utf-8")
-    log.info("Saved %d bytes → %s", len(content), BANK_RAW_FILE)
+    log.info("Saved %d bytes -> %s", len(content), BANK_RAW_FILE)
 
     df = pd.read_csv(io.StringIO(content), sep=";")
     log.info("Bank Marketing shape: %s", df.shape)
     return df
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# CFPB Consumer Complaints — three-tier fallback strategy
+# -----------------------------------------------------------------------------
+# CFPB Consumer Complaints -- three-tier fallback strategy
 #   1. Elasticsearch API (CFPB's public JSON endpoint)
 #   2. Bulk CSV download (streaming, take first N rows)
 #   3. Synthetic data generator (always works; clearly labelled)
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def _cfpb_try_api(size: int) -> pd.DataFrame | None:
     """
     Attempt to fetch complaints from the CFPB Elasticsearch API.
@@ -172,7 +172,7 @@ def _cfpb_try_api(size: int) -> pd.DataFrame | None:
                 # The API should return JSON; if it returns HTML the endpoint has moved
                 ct = resp.headers.get("content-type", "")
                 if "html" in ct:
-                    log.warning("CFPB API at %s returned HTML — endpoint may have changed", base_url)
+                    log.warning("CFPB API at %s returned HTML -- endpoint may have changed", base_url)
                     break
 
                 payload = resp.json()
@@ -204,7 +204,7 @@ def _cfpb_try_bulk_csv(size: int) -> pd.DataFrame | None:
             return None
         ct = resp.headers.get("content-type", "")
         if "html" in ct:
-            log.warning("CFPB bulk CSV URL returned HTML — link has moved")
+            log.warning("CFPB bulk CSV URL returned HTML -- link has moved")
             return None
 
         raw_bytes = _download_bytes(CFPB_BULK_CSV_URL, "cfpb_complaints.csv.zip")
@@ -228,7 +228,7 @@ def _cfpb_synthetic(size: int) -> pd.DataFrame:
     Clearly marked with source='synthetic' so downstream code can detect it.
     """
     log.warning(
-        "All CFPB real-data sources failed — generating %d synthetic records. "
+        "All CFPB real-data sources failed -- generating %d synthetic records. "
         "Mark source='synthetic' column will be present.",
         size,
     )
@@ -288,10 +288,10 @@ def _cfpb_synthetic(size: int) -> pd.DataFrame:
 def ingest_cfpb(force: bool = False) -> pd.DataFrame:
     """
     Fetch CFPB_SAMPLE_SIZE complaint records, trying three sources in order:
-      API → bulk CSV → synthetic fallback.
+      API -> bulk CSV -> synthetic fallback.
     """
     if CFPB_RAW_FILE.exists() and not force:
-        log.info("CFPB raw already at %s — skipping", CFPB_RAW_FILE)
+        log.info("CFPB raw already at %s -- skipping", CFPB_RAW_FILE)
         return pd.read_csv(CFPB_RAW_FILE, low_memory=False)
 
     df: pd.DataFrame | None = None
@@ -308,13 +308,13 @@ def ingest_cfpb(force: bool = False) -> pd.DataFrame:
 
     CFPB_RAW_FILE.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(CFPB_RAW_FILE, index=False)
-    log.info("Saved CFPB → %s  shape=%s", CFPB_RAW_FILE, df.shape)
+    log.info("Saved CFPB -> %s  shape=%s", CFPB_RAW_FILE, df.shape)
     return df
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # Committed samples (max COMMITTED_SAMPLE_ROWS, regenerated on every run)
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def write_samples(bank_df: pd.DataFrame, cfpb_df: pd.DataFrame) -> None:
     """
     Write 500-row stratified (y) bank sample and 500-row CFPB sample to
@@ -341,13 +341,13 @@ def write_samples(bank_df: pd.DataFrame, cfpb_df: pd.DataFrame) -> None:
     # Samples are written as standard comma-CSV (not semicolon like UCI raw)
     bank_sample.to_csv(BANK_SAMPLE_FILE, index=False)
     cfpb_sample.to_csv(CFPB_SAMPLE_FILE, index=False)
-    log.info("Wrote %d-row bank sample → %s", len(bank_sample), BANK_SAMPLE_FILE)
-    log.info("Wrote %d-row CFPB sample → %s", len(cfpb_sample), CFPB_SAMPLE_FILE)
+    log.info("Wrote %d-row bank sample -> %s", len(bank_sample), BANK_SAMPLE_FILE)
+    log.info("Wrote %d-row CFPB sample -> %s", len(cfpb_sample), CFPB_SAMPLE_FILE)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # CLI
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description=__doc__,
