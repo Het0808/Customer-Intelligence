@@ -1,10 +1,13 @@
 """
 API tests for src/serving/serve.py.
 
-Uses FastAPI's TestClient with a mocked ModelLoader so no real MLflow runs
-or trained models are required.  The mock is injected by patching the
-module-level _loader singleton in model_loader and replacing load_model()
-with a no-op that installs the mock instead of loading from disk.
+Uses FastAPI's TestClient with mocked singletons:
+  - ModelLoader  : patched so no MLflow run is needed
+  - RAG Retriever: patched so no FAISS index is needed
+
+The lifespan's load_model() and load_retriever() calls are both intercepted
+by fixtures, installing mock objects that satisfy get_loader() / get_retriever()
+without touching disk.
 """
 from __future__ import annotations
 
@@ -15,6 +18,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 import src.serving.model_loader as ml_module
+import src.rag.retrieve as rag_module
 from src.serving.serve import app
 
 # ---------------------------------------------------------------------------
@@ -56,14 +60,56 @@ def mock_loader() -> MagicMock:
 
 
 @pytest.fixture
-def client(mock_loader: MagicMock) -> TestClient:
-    """TestClient with load_model() patched to install the mock loader."""
+def mock_retriever() -> MagicMock:
+    from src.rag.retrieve import Retriever
+    r = MagicMock(spec=Retriever)
+    r.is_ready = True
+    r.corpus_size = 500
+    return r
 
-    def _install_mock():
+
+@pytest.fixture
+def mock_ask() -> MagicMock:
+    """
+    Mock the full ask() pipeline so no LLM call or vector search is needed
+    in API-layer tests.  Unit tests for the pipeline logic live in test_rag.py.
+    """
+    from src.rag.answer import AnswerResult
+    m = MagicMock()
+    m.return_value = AnswerResult(
+        answer="Based on [E1], customers commonly face payment processing delays.",
+        retrieved_ids=["1000001"],
+        evidence_sufficiency="sufficient",
+        prompt_version="v1.0",
+        refusal=False,
+        model_name="gpt-4o-mini",
+        latency_ms=234.5,
+        token_count=87,
+        generation_succeeded=True,
+    )
+    return m
+
+
+@pytest.fixture
+def client(mock_loader: MagicMock,
+           mock_retriever: MagicMock,
+           mock_ask: MagicMock) -> TestClient:
+    """
+    TestClient with the three singletons mocked:
+      - load_model  patched on src.serving.serve  (top-level import there)
+      - load_retriever patched on src.rag.retrieve (lifespan does lazy import)
+      - ask()  patched on src.rag.answer         (route does lazy import)
+    """
+    def _install_ml():
         ml_module._loader = mock_loader
-        return mock_loader
 
-    with patch("src.serving.serve.load_model", side_effect=_install_mock):
+    def _install_rag(index_dir=None):
+        rag_module._retriever = mock_retriever
+        return mock_retriever
+
+    with patch("src.serving.serve.load_model",   side_effect=_install_ml), \
+         patch("src.rag.retrieve.load_retriever", side_effect=_install_rag), \
+         patch("src.rag.answer.ask",              mock_ask):
         with TestClient(app) as c:
             yield c
 
@@ -247,3 +293,112 @@ class TestMetrics:
         data = client.get("/metrics").json()
         assert "threshold" in data
         assert isinstance(data["threshold"], float)
+
+
+# ---------------------------------------------------------------------------
+# /ask-complaints
+# ---------------------------------------------------------------------------
+COMPLAINT_PAYLOAD = {"question": "What problems do customers have with mortgages?"}
+
+COMPLAINT_PAYLOAD_FILTERED = {
+    "question": "What payment issues do mortgage customers face?",
+    "product":  "Mortgage",
+    "issue":    "Trouble during payment process",
+}
+
+
+class TestAskComplaints:
+    def test_valid_question_returns_200(self, client: TestClient) -> None:
+        assert client.post("/ask-complaints", json=COMPLAINT_PAYLOAD).status_code == 200
+
+    def test_response_has_required_fields(self, client: TestClient) -> None:
+        data = client.post("/ask-complaints", json=COMPLAINT_PAYLOAD).json()
+        for f in ("answer", "retrieved_ids", "evidence_sufficiency",
+                  "prompt_version", "refusal"):
+            assert f in data, f"Missing field: {f}"
+
+    def test_sufficient_evidence_response_structure(
+        self, client: TestClient
+    ) -> None:
+        data = client.post("/ask-complaints", json=COMPLAINT_PAYLOAD).json()
+        assert data["evidence_sufficiency"] == "sufficient"
+        assert data["refusal"] is False
+        assert len(data["retrieved_ids"]) > 0
+        assert data["answer"] is not None
+
+    def test_filtered_query_passes_filters_to_ask(
+        self, client: TestClient, mock_ask: MagicMock
+    ) -> None:
+        """Filters from the request must be forwarded to ask() as a dict."""
+        client.post("/ask-complaints", json=COMPLAINT_PAYLOAD_FILTERED)
+        _, kwargs = mock_ask.call_args
+        filters = kwargs.get("filters") or {}
+        assert filters.get("product") == "Mortgage"
+        assert filters.get("issue") == "Trouble during payment process"
+
+    def test_null_filter_fields_omitted_from_ask(
+        self, client: TestClient, mock_ask: MagicMock
+    ) -> None:
+        """None-valued filter fields must not appear in the filters dict."""
+        client.post("/ask-complaints", json={"question": "test", "product": None})
+        _, kwargs = mock_ask.call_args
+        filters = kwargs.get("filters")
+        # None fields should produce filters=None or empty dict, not {"product": None}
+        if filters:
+            assert "product" not in filters or filters["product"] is not None
+
+    def test_insufficient_evidence_returns_refusal(
+        self, client: TestClient, mock_ask: MagicMock
+    ) -> None:
+        from src.rag.answer import AnswerResult
+        mock_ask.return_value = AnswerResult(
+            answer=None, retrieved_ids=[], evidence_sufficiency="insufficient",
+            prompt_version="v1.0", refusal=True, model_name="gpt-4o-mini",
+            latency_ms=5.2, token_count=0, generation_succeeded=False,
+        )
+        data = client.post("/ask-complaints", json=COMPLAINT_PAYLOAD).json()
+        assert data["refusal"] is True
+        assert data["retrieved_ids"] == []
+        assert data["evidence_sufficiency"] == "insufficient"
+        assert data["answer"] is None
+
+    def test_refusal_answer_is_null_and_prompt_version_present(
+        self, client: TestClient, mock_ask: MagicMock
+    ) -> None:
+        from src.rag.answer import AnswerResult
+        mock_ask.return_value = AnswerResult(
+            answer=None, retrieved_ids=[], evidence_sufficiency="insufficient",
+            prompt_version="v1.0", refusal=True, model_name="gpt-4o-mini",
+            latency_ms=5.2, token_count=0, generation_succeeded=False,
+        )
+        data = client.post("/ask-complaints", json=COMPLAINT_PAYLOAD).json()
+        assert data["answer"] is None
+        assert data["prompt_version"] == "v1.0"
+
+    def test_missing_question_returns_422(self, client: TestClient) -> None:
+        assert client.post("/ask-complaints", json={}).status_code == 422
+
+    def test_empty_question_returns_422(self, client: TestClient) -> None:
+        assert client.post("/ask-complaints",
+                           json={"question": ""}).status_code == 422
+
+    def test_rag_unavailable_returns_503(self, mock_loader: MagicMock) -> None:
+        """When FAISS index absent the lifespan logs a warning and the endpoint
+        returns 503 -- the prediction endpoints must still work."""
+        def _install_ml():
+            ml_module._loader = mock_loader
+
+        rag_module._retriever = None
+
+        # Simulate absent index regardless of whether one is on disk.
+        with patch("src.serving.serve.load_model", side_effect=_install_ml), \
+             patch("src.rag.retrieve.load_retriever",
+                   side_effect=FileNotFoundError("no index (simulated)")):
+            with TestClient(app) as c:
+                resp = c.post("/ask-complaints", json=COMPLAINT_PAYLOAD)
+        assert resp.status_code == 503
+
+    def test_health_reports_rag_ready(self, client: TestClient) -> None:
+        data = client.get("/health").json()
+        assert "rag_ready" in data
+        assert data["rag_ready"] is True

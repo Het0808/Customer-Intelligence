@@ -113,3 +113,24 @@ class BatchScoreResponse(BaseModel):
     results: list[BatchRecord]
     total:   int
     errors:  int
+
+
+# -----------------------------------------------------------------------------
+# RAG complaint intelligence schemas
+# -----------------------------------------------------------------------------
+class ComplaintQuery(BaseModel):
+    """Input for POST /ask-complaints."""
+    question:  str  = Field(..., min_length=1, description="Natural-language question about complaints")
+    product:   str | None = Field(None, description="Filter by CFPB product category")
+    company:   str | None = Field(None, description="Filter by company name (exact match)")
+    date_from: str | None = Field(None, description="Earliest complaint date (YYYY-MM-DD)")
+    issue:     str | None = Field(None, description="Filter by complaint issue type")
+
+
+class ComplaintAnswer(BaseModel):
+    """Output for POST /ask-complaints."""
+    answer:               str | None       # None when refusal=True
+    retrieved_ids:        list[str]        # complaint IDs used as evidence; [] on refusal
+    evidence_sufficiency: str              # "sufficient" | "insufficient"
+    prompt_version:       str
+    refusal:              bool
