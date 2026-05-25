@@ -1,0 +1,57 @@
+# ── Environment ──────────────────────────────────────────────────────────────
+.env
+.env.local
+
+# ── Raw & processed datasets  (download locally with ingest.py) ──────────────
+data/raw/
+data/processed/
+
+# Full CFPB narratives (PII-adjacent, very large)
+data/**/*narrative*
+data/**/*complaint_what_happened*
+
+# ── ML artefacts ─────────────────────────────────────────────────────────────
+mlruns/
+mlartifacts/
+*.pkl
+*.joblib
+*.h5
+*.onnx
+*.pt
+*.bin
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+site-packages/
+
+# ── Testing / QA ─────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ── Notebooks ────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.log
+*.tmp

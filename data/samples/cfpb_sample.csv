@@ -1,0 +1,501 @@
+date_received,product,sub_product,issue,sub_issue,company,state,zip_code,submitted_via,company_response_to_consumer,timely_response,consumer_disputed,complaint_id,source
+2024-09-22,Mortgage,unknown,Problem with a purchase shown on your statement,unknown,Company_41,AZ,50736,Phone,Closed with explanation,No,,1006252,synthetic
+2024-05-15,Credit reporting,unknown,Trouble during payment process,unknown,Company_7,MA,36866,Referral,Closed without relief,No,Yes,1004684,synthetic
+2021-06-23,Student loan,unknown,Trouble during payment process,unknown,Company_89,WA,24249,Postal mail,In progress,Yes,No,1001731,synthetic
+2024-07-13,Payday loan,unknown,Incorrect information on your report,unknown,Company_197,MO,78276,Postal mail,In progress,No,,1004742,synthetic
+2020-01-16,Debt collection,unknown,Trouble during payment process,unknown,Company_28,AZ,62014,Referral,Closed without relief,Yes,Yes,1004521,synthetic
+2023-07-16,Debt collection,unknown,Account information incorrect,unknown,Company_98,TX,94589,Phone,Closed without relief,No,Yes,1006340,synthetic
+2020-08-05,Payday loan,unknown,Can't repay your loan,unknown,Company_138,NJ,70616,Postal mail,Closed with explanation,No,,1000576,synthetic
+2021-03-12,Mortgage,unknown,Managing an account,unknown,Company_91,WA,35771,Postal mail,Closed with explanation,Yes,,1005202,synthetic
+2022-10-26,Debt collection,unknown,Communication tactics,unknown,Company_62,OH,29752,Web,In progress,No,,1006363,synthetic
+2022-06-25,Checking or savings account,unknown,Communication tactics,unknown,Company_142,NY,33038,Email,In progress,Yes,No,1000439,synthetic
+2021-03-15,Checking or savings account,unknown,Trouble during payment process,unknown,Company_142,AZ,98558,Postal mail,Closed with monetary relief,No,Yes,1002750,synthetic
+2019-03-26,Mortgage,unknown,Managing an account,unknown,Company_118,TX,35115,Referral,Closed with explanation,Yes,No,1007487,synthetic
+2020-07-28,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_93,MD,57774,Fax,Closed with monetary relief,No,No,1005272,synthetic
+2023-11-01,Student loan,unknown,Problem with a purchase shown on your statement,unknown,Company_134,NC,95178,Referral,Closed with explanation,No,Yes,1005653,synthetic
+2019-01-28,Student loan,unknown,Incorrect information on your report,unknown,Company_55,NY,27904,Fax,Closed with monetary relief,No,No,1003999,synthetic
+2019-12-09,Debt collection,unknown,Incorrect information on your report,unknown,Company_18,WA,60293,Phone,In progress,Yes,No,1006033,synthetic
+2024-03-07,Mortgage,unknown,Communication tactics,unknown,Company_100,IN,25182,Web,Closed with non-monetary relief,Yes,,1000582,synthetic
+2023-09-19,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_183,MI,78839,Web,Closed without relief,Yes,No,1009930,synthetic
+2023-10-18,Debt collection,unknown,Managing an account,unknown,Company_26,MO,72969,Email,Closed with non-monetary relief,Yes,No,1007051,synthetic
+2022-06-03,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_66,FL,78569,Fax,Closed with monetary relief,Yes,,1008158,synthetic
+2019-02-05,Credit reporting,unknown,Communication tactics,unknown,Company_187,TN,12413,Postal mail,In progress,No,Yes,1009896,synthetic
+2021-06-01,Credit card,unknown,Account information incorrect,unknown,Company_53,MA,54659,Phone,Closed with non-monetary relief,Yes,,1002249,synthetic
+2020-01-12,Credit card,unknown,Can't repay your loan,unknown,Company_187,NJ,23172,Phone,Closed with monetary relief,Yes,Yes,1004640,synthetic
+2021-03-21,Mortgage,unknown,Account information incorrect,unknown,Company_95,WA,71412,Referral,Closed with explanation,Yes,,1009485,synthetic
+2022-05-19,Payday loan,unknown,Incorrect information on your report,unknown,Company_113,MO,70757,Web,Closed without relief,No,,1004947,synthetic
+2024-09-14,Mortgage,unknown,Communication tactics,unknown,Company_18,NJ,94325,Web,Closed with non-monetary relief,No,No,1009920,synthetic
+2023-01-23,Mortgage,unknown,Can't repay your loan,unknown,Company_198,NJ,40976,Postal mail,In progress,Yes,Yes,1001963,synthetic
+2022-04-08,Student loan,unknown,Managing an account,unknown,Company_51,GA,97161,Web,Closed with explanation,Yes,Yes,1008243,synthetic
+2021-01-02,Student loan,unknown,Problem with a purchase shown on your statement,unknown,Company_88,NC,29268,Postal mail,Closed with explanation,Yes,Yes,1006590,synthetic
+2019-06-08,Checking or savings account,unknown,Communication tactics,unknown,Company_116,PA,93509,Phone,Closed with explanation,Yes,Yes,1008847,synthetic
+2023-06-25,Debt collection,unknown,Communication tactics,unknown,Company_79,MA,44735,Web,Closed with explanation,Yes,,1000321,synthetic
+2022-07-26,Credit reporting,unknown,Account information incorrect,unknown,Company_22,MD,84879,Postal mail,Closed without relief,No,No,1002678,synthetic
+2020-02-27,Debt collection,unknown,Trouble during payment process,unknown,Company_111,TN,74983,Postal mail,Closed with monetary relief,Yes,Yes,1004625,synthetic
+2024-12-01,Payday loan,unknown,Managing an account,unknown,Company_21,TX,19068,Email,Closed with explanation,Yes,Yes,1004949,synthetic
+2019-06-08,Mortgage,unknown,Incorrect information on your report,unknown,Company_69,GA,21336,Email,In progress,No,No,1008328,synthetic
+2023-06-23,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_32,MI,33755,Fax,Closed with non-monetary relief,No,No,1003337,synthetic
+2021-07-20,Mortgage,unknown,Trouble during payment process,unknown,Company_50,WA,83745,Email,Closed with monetary relief,Yes,Yes,1005589,synthetic
+2023-06-13,Student loan,unknown,Can't repay your loan,unknown,Company_177,FL,75639,Email,Closed with non-monetary relief,Yes,Yes,1000251,synthetic
+2024-07-07,Vehicle loan or lease,unknown,Trouble during payment process,unknown,Company_175,GA,54766,Postal mail,Closed with explanation,Yes,,1003973,synthetic
+2019-08-08,Payday loan,unknown,Account information incorrect,unknown,Company_45,NY,59137,Phone,In progress,No,No,1006630,synthetic
+2023-08-10,Payday loan,unknown,Incorrect information on your report,unknown,Company_8,MA,35599,Fax,Closed without relief,Yes,,1005547,synthetic
+2023-09-05,Credit reporting,unknown,Trouble during payment process,unknown,Company_11,MI,57795,Web,Closed with non-monetary relief,Yes,,1000035,synthetic
+2020-09-05,Payday loan,unknown,Managing an account,unknown,Company_176,WI,93588,Email,In progress,Yes,,1008362,synthetic
+2022-06-07,Checking or savings account,unknown,Communication tactics,unknown,Company_159,MD,72710,Email,In progress,Yes,,1001513,synthetic
+2024-03-12,Mortgage,unknown,Problem with a purchase shown on your statement,unknown,Company_34,MD,82656,Phone,Closed with non-monetary relief,Yes,No,1009317,synthetic
+2020-01-22,Debt collection,unknown,Communication tactics,unknown,Company_85,NC,19099,Referral,Closed with non-monetary relief,No,,1000039,synthetic
+2022-12-27,Mortgage,unknown,Account information incorrect,unknown,Company_68,CA,90613,Referral,Closed with explanation,No,,1004819,synthetic
+2022-01-08,Credit reporting,unknown,Communication tactics,unknown,Company_106,VA,62719,Web,Closed with explanation,No,No,1003465,synthetic
+2020-06-17,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_58,IN,23921,Fax,Closed without relief,No,No,1001760,synthetic
+2020-05-25,Checking or savings account,unknown,Account information incorrect,unknown,Company_42,MD,17540,Postal mail,Closed with non-monetary relief,No,No,1002304,synthetic
+2021-10-13,Checking or savings account,unknown,Can't repay your loan,unknown,Company_151,GA,14446,Referral,Closed without relief,No,Yes,1003723,synthetic
+2023-11-13,Student loan,unknown,Incorrect information on your report,unknown,Company_43,VA,52175,Fax,Closed with explanation,Yes,,1008284,synthetic
+2022-07-03,Mortgage,unknown,Communication tactics,unknown,Company_102,NC,50950,Referral,In progress,Yes,No,1004993,synthetic
+2020-11-08,Payday loan,unknown,Incorrect information on your report,unknown,Company_150,FL,23527,Email,Closed with monetary relief,No,,1008127,synthetic
+2023-02-17,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_18,IL,49371,Email,In progress,No,,1003032,synthetic
+2021-03-01,Student loan,unknown,Can't repay your loan,unknown,Company_37,VA,84429,Postal mail,Closed with monetary relief,No,No,1007938,synthetic
+2024-03-05,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_153,PA,14332,Phone,Closed without relief,Yes,Yes,1003039,synthetic
+2021-10-23,Credit card,unknown,Communication tactics,unknown,Company_58,OH,44086,Referral,Closed with monetary relief,No,Yes,1009655,synthetic
+2023-08-19,Vehicle loan or lease,unknown,Trouble during payment process,unknown,Company_17,PA,11058,Referral,Closed with explanation,No,No,1002545,synthetic
+2020-08-23,Credit card,unknown,Can't repay your loan,unknown,Company_156,OH,67165,Postal mail,In progress,No,No,1002592,synthetic
+2019-12-23,Credit card,unknown,Communication tactics,unknown,Company_111,TN,44479,Web,Closed with monetary relief,No,,1001188,synthetic
+2019-07-05,Debt collection,unknown,Can't repay your loan,unknown,Company_194,PA,51990,Email,Closed with monetary relief,No,No,1007966,synthetic
+2024-05-23,Payday loan,unknown,Trouble during payment process,unknown,Company_47,FL,72221,Email,Closed without relief,No,No,1006077,synthetic
+2019-10-12,Student loan,unknown,Account information incorrect,unknown,Company_76,NJ,64460,Phone,Closed with monetary relief,Yes,,1000107,synthetic
+2023-08-04,Checking or savings account,unknown,Managing an account,unknown,Company_54,MD,98065,Phone,Closed with non-monetary relief,Yes,Yes,1001315,synthetic
+2022-03-28,Credit card,unknown,Communication tactics,unknown,Company_98,MI,17743,Web,Closed without relief,Yes,No,1008187,synthetic
+2022-11-10,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_92,NJ,99687,Phone,Closed without relief,Yes,No,1002753,synthetic
+2022-10-17,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_105,TN,97056,Web,Closed with monetary relief,Yes,,1009753,synthetic
+2022-09-18,Payday loan,unknown,Incorrect information on your report,unknown,Company_33,WA,39406,Phone,Closed with monetary relief,No,No,1006231,synthetic
+2023-02-09,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_190,IN,54509,Phone,Closed with non-monetary relief,No,No,1002876,synthetic
+2023-02-28,Credit reporting,unknown,Trouble during payment process,unknown,Company_13,IL,24045,Phone,In progress,Yes,,1005323,synthetic
+2022-09-24,Debt collection,unknown,Account information incorrect,unknown,Company_84,IN,86332,Phone,Closed with non-monetary relief,No,Yes,1000799,synthetic
+2019-06-05,Mortgage,unknown,Trouble during payment process,unknown,Company_84,FL,92781,Fax,Closed with explanation,No,,1003570,synthetic
+2024-05-05,Credit card,unknown,Communication tactics,unknown,Company_138,PA,64709,Fax,Closed with monetary relief,Yes,,1002894,synthetic
+2022-07-24,Payday loan,unknown,Account information incorrect,unknown,Company_89,NJ,44237,Referral,Closed without relief,Yes,No,1002927,synthetic
+2022-07-15,Debt collection,unknown,Account information incorrect,unknown,Company_130,MO,10854,Referral,In progress,Yes,,1008178,synthetic
+2021-05-12,Credit reporting,unknown,Trouble during payment process,unknown,Company_138,NC,24246,Postal mail,Closed without relief,Yes,Yes,1000971,synthetic
+2021-01-15,Mortgage,unknown,Incorrect information on your report,unknown,Company_52,IN,84075,Phone,Closed with non-monetary relief,Yes,Yes,1006687,synthetic
+2023-02-03,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_6,MA,25769,Postal mail,In progress,Yes,Yes,1008575,synthetic
+2024-11-03,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_110,NC,19439,Web,In progress,No,No,1002020,synthetic
+2024-02-19,Student loan,unknown,Account information incorrect,unknown,Company_20,IL,44121,Fax,Closed with non-monetary relief,No,Yes,1009054,synthetic
+2019-05-22,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_37,MO,36707,Web,Closed with non-monetary relief,Yes,,1000952,synthetic
+2019-07-08,Student loan,unknown,Managing an account,unknown,Company_39,PA,57553,Web,In progress,No,No,1005359,synthetic
+2020-05-07,Payday loan,unknown,Account information incorrect,unknown,Company_96,FL,50975,Referral,Closed without relief,No,No,1003857,synthetic
+2022-03-12,Mortgage,unknown,Account information incorrect,unknown,Company_181,AZ,32713,Phone,Closed with explanation,No,Yes,1005861,synthetic
+2024-12-09,Credit reporting,unknown,Trouble during payment process,unknown,Company_120,IL,25234,Postal mail,Closed with monetary relief,No,No,1003145,synthetic
+2023-12-27,Debt collection,unknown,Account information incorrect,unknown,Company_114,PA,40605,Postal mail,Closed without relief,No,Yes,1003305,synthetic
+2021-12-08,Mortgage,unknown,Communication tactics,unknown,Company_157,VA,95769,Phone,Closed with monetary relief,No,No,1003006,synthetic
+2022-03-09,Credit reporting,unknown,Trouble during payment process,unknown,Company_82,MD,29364,Phone,Closed with explanation,No,,1009001,synthetic
+2022-04-19,Debt collection,unknown,Account information incorrect,unknown,Company_188,NY,30921,Email,Closed with non-monetary relief,Yes,Yes,1007770,synthetic
+2019-07-12,Checking or savings account,unknown,Account information incorrect,unknown,Company_49,MD,13958,Postal mail,Closed with non-monetary relief,No,Yes,1007438,synthetic
+2022-12-10,Credit card,unknown,Can't repay your loan,unknown,Company_45,FL,61832,Phone,In progress,Yes,No,1007942,synthetic
+2020-05-15,Checking or savings account,unknown,Account information incorrect,unknown,Company_155,MA,36503,Referral,Closed without relief,Yes,,1009238,synthetic
+2020-10-14,Debt collection,unknown,Managing an account,unknown,Company_101,OH,90775,Email,Closed without relief,Yes,,1001056,synthetic
+2022-04-23,Credit reporting,unknown,Incorrect information on your report,unknown,Company_196,MI,81403,Referral,Closed with monetary relief,Yes,Yes,1003154,synthetic
+2019-07-03,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_11,AZ,89603,Phone,In progress,No,,1003787,synthetic
+2021-09-08,Credit card,unknown,Trouble during payment process,unknown,Company_173,FL,28928,Fax,Closed without relief,No,No,1009189,synthetic
+2024-11-15,Mortgage,unknown,Trouble during payment process,unknown,Company_12,TN,41715,Fax,Closed without relief,Yes,,1007825,synthetic
+2024-12-02,Student loan,unknown,Incorrect information on your report,unknown,Company_39,TX,11518,Email,Closed with monetary relief,Yes,No,1007539,synthetic
+2019-06-24,Checking or savings account,unknown,Trouble during payment process,unknown,Company_40,IL,64967,Web,Closed with monetary relief,No,,1007231,synthetic
+2022-02-02,Vehicle loan or lease,unknown,Communication tactics,unknown,Company_174,GA,94883,Email,Closed with monetary relief,No,,1000764,synthetic
+2024-03-23,Checking or savings account,unknown,Problem with a purchase shown on your statement,unknown,Company_62,AZ,49548,Fax,Closed with non-monetary relief,Yes,No,1005019,synthetic
+2021-03-13,Mortgage,unknown,Problem with a purchase shown on your statement,unknown,Company_193,PA,42219,Referral,Closed with non-monetary relief,No,Yes,1004903,synthetic
+2024-09-12,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_199,TN,70514,Fax,Closed without relief,No,,1008093,synthetic
+2019-03-04,Credit card,unknown,Can't repay your loan,unknown,Company_130,MD,47006,Postal mail,Closed with monetary relief,Yes,Yes,1006843,synthetic
+2022-04-19,Payday loan,unknown,Managing an account,unknown,Company_48,VA,55444,Web,Closed with explanation,No,No,1002165,synthetic
+2023-05-11,Mortgage,unknown,Account information incorrect,unknown,Company_32,WI,27664,Email,In progress,Yes,Yes,1001862,synthetic
+2021-01-17,Payday loan,unknown,Managing an account,unknown,Company_139,NY,72180,Phone,Closed without relief,Yes,,1007850,synthetic
+2020-06-07,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_110,MD,75241,Postal mail,In progress,Yes,Yes,1009123,synthetic
+2023-01-06,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_76,MO,58460,Email,Closed with monetary relief,No,Yes,1002340,synthetic
+2023-01-05,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_107,PA,40743,Postal mail,Closed without relief,Yes,,1005527,synthetic
+2020-08-24,Payday loan,unknown,Incorrect information on your report,unknown,Company_112,MI,94337,Web,Closed with explanation,No,No,1006743,synthetic
+2022-08-25,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_80,TN,47100,Phone,Closed without relief,Yes,,1004003,synthetic
+2024-08-28,Credit card,unknown,Communication tactics,unknown,Company_38,CA,34223,Phone,Closed with monetary relief,Yes,,1001123,synthetic
+2020-04-02,Payday loan,unknown,Can't repay your loan,unknown,Company_80,IL,35038,Phone,In progress,Yes,Yes,1008709,synthetic
+2024-10-04,Credit reporting,unknown,Can't repay your loan,unknown,Company_35,MI,46366,Web,Closed with explanation,No,No,1004049,synthetic
+2023-11-20,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_135,MA,32136,Web,In progress,Yes,No,1007640,synthetic
+2024-11-17,Credit card,unknown,Incorrect information on your report,unknown,Company_120,AZ,20378,Postal mail,Closed with non-monetary relief,Yes,Yes,1000765,synthetic
+2023-04-16,Credit card,unknown,Incorrect information on your report,unknown,Company_173,AZ,16541,Referral,Closed without relief,No,,1002344,synthetic
+2024-03-12,Student loan,unknown,Can't repay your loan,unknown,Company_137,MD,91939,Referral,Closed with explanation,No,Yes,1004071,synthetic
+2019-08-17,Checking or savings account,unknown,Account information incorrect,unknown,Company_83,MI,81026,Referral,Closed with explanation,Yes,Yes,1007216,synthetic
+2021-04-07,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_50,VA,90285,Postal mail,Closed with non-monetary relief,Yes,,1004216,synthetic
+2023-10-21,Credit reporting,unknown,Managing an account,unknown,Company_3,NY,34216,Email,Closed without relief,No,,1007952,synthetic
+2024-03-16,Checking or savings account,unknown,Problem with a purchase shown on your statement,unknown,Company_36,CA,15908,Email,Closed with non-monetary relief,Yes,Yes,1005970,synthetic
+2024-11-03,Credit card,unknown,Managing an account,unknown,Company_130,GA,17910,Fax,Closed without relief,No,No,1003350,synthetic
+2024-07-18,Credit card,unknown,Trouble during payment process,unknown,Company_60,TN,95062,Phone,Closed with monetary relief,No,,1004695,synthetic
+2021-02-18,Debt collection,unknown,Communication tactics,unknown,Company_139,MI,68898,Postal mail,Closed with explanation,Yes,No,1003399,synthetic
+2022-02-25,Mortgage,unknown,Problem with a purchase shown on your statement,unknown,Company_52,NC,12783,Referral,Closed without relief,Yes,No,1004081,synthetic
+2024-01-04,Debt collection,unknown,Account information incorrect,unknown,Company_175,IL,83319,Postal mail,In progress,Yes,Yes,1009149,synthetic
+2021-10-04,Student loan,unknown,Can't repay your loan,unknown,Company_134,MD,94519,Postal mail,Closed with non-monetary relief,No,,1001224,synthetic
+2023-08-25,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_161,VA,64884,Phone,In progress,Yes,Yes,1006292,synthetic
+2019-05-23,Credit card,unknown,Trouble during payment process,unknown,Company_71,MD,36313,Web,Closed without relief,No,No,1003122,synthetic
+2024-03-23,Credit card,unknown,Trouble during payment process,unknown,Company_125,GA,51515,Fax,Closed with non-monetary relief,No,,1000510,synthetic
+2021-06-22,Checking or savings account,unknown,Can't repay your loan,unknown,Company_152,WA,46669,Email,Closed with monetary relief,Yes,Yes,1005794,synthetic
+2023-05-18,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_117,WI,94772,Phone,In progress,Yes,,1008181,synthetic
+2023-12-12,Payday loan,unknown,Trouble during payment process,unknown,Company_183,MO,30549,Fax,Closed with non-monetary relief,No,Yes,1009417,synthetic
+2022-02-17,Payday loan,unknown,Account information incorrect,unknown,Company_185,PA,63736,Email,Closed with monetary relief,Yes,No,1000096,synthetic
+2023-11-24,Student loan,unknown,Account information incorrect,unknown,Company_30,VA,82412,Web,Closed with explanation,Yes,Yes,1006681,synthetic
+2019-02-09,Payday loan,unknown,Account information incorrect,unknown,Company_109,VA,96715,Postal mail,Closed with explanation,No,No,1001512,synthetic
+2020-05-08,Mortgage,unknown,Incorrect information on your report,unknown,Company_103,MD,64685,Email,Closed with explanation,No,,1008791,synthetic
+2020-12-14,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_17,TN,68756,Referral,In progress,Yes,No,1000119,synthetic
+2021-11-22,Credit card,unknown,Can't repay your loan,unknown,Company_79,PA,51827,Email,In progress,Yes,No,1007791,synthetic
+2019-05-16,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_129,TX,89725,Fax,Closed with non-monetary relief,No,,1006517,synthetic
+2024-07-27,Checking or savings account,unknown,Account information incorrect,unknown,Company_1,NJ,27146,Email,Closed with non-monetary relief,Yes,,1000033,synthetic
+2024-01-18,Payday loan,unknown,Managing an account,unknown,Company_163,MI,23123,Postal mail,In progress,No,No,1007887,synthetic
+2024-10-18,Student loan,unknown,Problem with a purchase shown on your statement,unknown,Company_113,MO,18517,Referral,Closed without relief,Yes,No,1006830,synthetic
+2024-05-01,Checking or savings account,unknown,Trouble during payment process,unknown,Company_146,AZ,78208,Referral,In progress,Yes,No,1005421,synthetic
+2022-04-03,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_142,MI,71216,Email,Closed without relief,No,,1001068,synthetic
+2021-04-03,Credit reporting,unknown,Account information incorrect,unknown,Company_29,TN,70874,Postal mail,In progress,No,Yes,1001347,synthetic
+2022-05-02,Payday loan,unknown,Incorrect information on your report,unknown,Company_24,WI,42202,Fax,Closed with explanation,No,No,1004747,synthetic
+2019-04-21,Debt collection,unknown,Communication tactics,unknown,Company_193,NJ,99250,Phone,Closed with explanation,No,No,1006005,synthetic
+2019-06-08,Mortgage,unknown,Managing an account,unknown,Company_17,FL,11684,Web,Closed with explanation,No,,1006039,synthetic
+2022-11-03,Checking or savings account,unknown,Can't repay your loan,unknown,Company_47,FL,21740,Postal mail,Closed with monetary relief,Yes,Yes,1003817,synthetic
+2019-10-11,Student loan,unknown,Communication tactics,unknown,Company_142,GA,40588,Phone,In progress,No,,1008446,synthetic
+2021-06-02,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_31,NJ,25833,Fax,Closed with explanation,Yes,No,1005269,synthetic
+2022-08-10,Credit reporting,unknown,Can't repay your loan,unknown,Company_69,GA,76528,Email,Closed with non-monetary relief,Yes,,1006897,synthetic
+2019-02-26,Checking or savings account,unknown,Trouble during payment process,unknown,Company_144,NY,75131,Email,In progress,Yes,No,1005309,synthetic
+2023-05-22,Credit card,unknown,Trouble during payment process,unknown,Company_68,NY,24029,Email,In progress,Yes,No,1000031,synthetic
+2024-07-18,Checking or savings account,unknown,Can't repay your loan,unknown,Company_106,MI,80578,Email,Closed with monetary relief,Yes,,1005674,synthetic
+2019-12-28,Checking or savings account,unknown,Can't repay your loan,unknown,Company_77,IN,85399,Referral,Closed with explanation,Yes,,1004386,synthetic
+2019-01-15,Credit card,unknown,Account information incorrect,unknown,Company_138,OH,76307,Referral,Closed with monetary relief,No,Yes,1000029,synthetic
+2020-03-26,Credit reporting,unknown,Trouble during payment process,unknown,Company_129,NY,90757,Web,Closed with non-monetary relief,Yes,Yes,1004202,synthetic
+2020-02-13,Debt collection,unknown,Account information incorrect,unknown,Company_126,MI,97676,Email,Closed with explanation,Yes,,1007507,synthetic
+2022-11-11,Credit reporting,unknown,Can't repay your loan,unknown,Company_9,NC,20498,Postal mail,Closed without relief,No,No,1000735,synthetic
+2021-09-24,Student loan,unknown,Trouble during payment process,unknown,Company_125,GA,92208,Phone,Closed without relief,Yes,Yes,1002067,synthetic
+2024-04-20,Checking or savings account,unknown,Problem with a purchase shown on your statement,unknown,Company_194,PA,92345,Web,Closed with explanation,No,No,1000106,synthetic
+2024-08-12,Vehicle loan or lease,unknown,Managing an account,unknown,Company_141,WA,81070,Web,Closed without relief,No,No,1009644,synthetic
+2019-09-25,Student loan,unknown,Communication tactics,unknown,Company_61,WA,85862,Email,Closed with monetary relief,Yes,,1008894,synthetic
+2019-05-12,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_32,MO,33785,Fax,In progress,Yes,,1008020,synthetic
+2024-03-27,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_47,WA,69383,Web,In progress,No,No,1002232,synthetic
+2019-09-08,Checking or savings account,unknown,Account information incorrect,unknown,Company_164,PA,46406,Phone,Closed with non-monetary relief,Yes,,1000993,synthetic
+2024-11-19,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_1,FL,93257,Web,In progress,No,,1009412,synthetic
+2019-02-15,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_7,MI,87603,Email,Closed with monetary relief,No,No,1007058,synthetic
+2020-07-09,Debt collection,unknown,Trouble during payment process,unknown,Company_63,VA,83856,Web,Closed without relief,Yes,Yes,1006789,synthetic
+2021-05-27,Payday loan,unknown,Can't repay your loan,unknown,Company_179,NY,39878,Phone,Closed with non-monetary relief,No,No,1000360,synthetic
+2021-04-02,Mortgage,unknown,Can't repay your loan,unknown,Company_102,IN,47550,Email,In progress,No,No,1000304,synthetic
+2023-06-11,Payday loan,unknown,Incorrect information on your report,unknown,Company_150,CA,60354,Phone,Closed without relief,No,Yes,1002627,synthetic
+2019-03-04,Student loan,unknown,Account information incorrect,unknown,Company_112,WA,40822,Phone,Closed without relief,No,Yes,1008965,synthetic
+2020-06-21,Checking or savings account,unknown,Communication tactics,unknown,Company_167,IN,65216,Phone,In progress,No,No,1004513,synthetic
+2022-06-26,Credit card,unknown,Account information incorrect,unknown,Company_34,NC,58335,Web,Closed without relief,No,,1005910,synthetic
+2021-03-16,Student loan,unknown,Problem with a purchase shown on your statement,unknown,Company_3,VA,20591,Email,Closed with monetary relief,No,No,1008313,synthetic
+2024-02-10,Mortgage,unknown,Incorrect information on your report,unknown,Company_22,GA,30522,Referral,Closed with explanation,No,,1003100,synthetic
+2021-07-06,Checking or savings account,unknown,Communication tactics,unknown,Company_137,AZ,35692,Referral,Closed without relief,Yes,Yes,1005703,synthetic
+2023-03-09,Credit reporting,unknown,Incorrect information on your report,unknown,Company_46,MD,88149,Fax,Closed without relief,Yes,No,1003898,synthetic
+2022-06-25,Payday loan,unknown,Can't repay your loan,unknown,Company_35,WI,91365,Postal mail,Closed without relief,No,No,1005440,synthetic
+2020-04-21,Mortgage,unknown,Managing an account,unknown,Company_40,NY,41821,Email,Closed without relief,Yes,Yes,1007930,synthetic
+2022-06-08,Checking or savings account,unknown,Incorrect information on your report,unknown,Company_50,TX,13106,Fax,Closed with explanation,Yes,,1000621,synthetic
+2021-09-13,Payday loan,unknown,Managing an account,unknown,Company_82,PA,47605,Email,Closed with explanation,No,,1007235,synthetic
+2023-09-19,Mortgage,unknown,Communication tactics,unknown,Company_40,GA,27500,Postal mail,Closed with monetary relief,Yes,,1002498,synthetic
+2021-06-26,Mortgage,unknown,Can't repay your loan,unknown,Company_161,NJ,59882,Web,Closed without relief,No,No,1000713,synthetic
+2021-09-08,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_95,WI,87645,Referral,Closed without relief,Yes,No,1008403,synthetic
+2023-10-13,Debt collection,unknown,Trouble during payment process,unknown,Company_27,MO,19429,Email,Closed with monetary relief,Yes,Yes,1002855,synthetic
+2022-03-15,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_110,MA,48197,Postal mail,In progress,No,,1004269,synthetic
+2021-02-25,Checking or savings account,unknown,Can't repay your loan,unknown,Company_134,MD,52290,Email,Closed with monetary relief,Yes,,1002908,synthetic
+2021-02-21,Credit reporting,unknown,Communication tactics,unknown,Company_135,NJ,39171,Web,Closed with non-monetary relief,No,No,1008080,synthetic
+2024-06-01,Credit reporting,unknown,Account information incorrect,unknown,Company_14,FL,29483,Postal mail,Closed without relief,No,No,1004516,synthetic
+2020-03-13,Credit card,unknown,Communication tactics,unknown,Company_22,VA,99923,Email,Closed with explanation,No,Yes,1001261,synthetic
+2021-01-05,Debt collection,unknown,Account information incorrect,unknown,Company_181,OH,97774,Referral,Closed with monetary relief,No,Yes,1003160,synthetic
+2023-03-14,Credit card,unknown,Communication tactics,unknown,Company_2,PA,96066,Referral,Closed with monetary relief,No,No,1000970,synthetic
+2024-08-08,Payday loan,unknown,Trouble during payment process,unknown,Company_64,MO,65461,Web,Closed with non-monetary relief,No,Yes,1003912,synthetic
+2024-12-18,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_67,TN,43880,Web,Closed with explanation,Yes,,1005198,synthetic
+2024-11-20,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_169,AZ,25201,Email,Closed without relief,Yes,No,1008846,synthetic
+2020-02-06,Credit reporting,unknown,Incorrect information on your report,unknown,Company_108,MI,73469,Web,Closed with non-monetary relief,No,Yes,1000259,synthetic
+2019-04-03,Debt collection,unknown,Managing an account,unknown,Company_62,GA,12597,Web,Closed with explanation,Yes,,1003790,synthetic
+2019-02-20,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_156,CA,26530,Web,Closed with monetary relief,No,,1009202,synthetic
+2023-08-25,Payday loan,unknown,Account information incorrect,unknown,Company_98,WI,47555,Postal mail,Closed with monetary relief,Yes,,1000487,synthetic
+2020-01-01,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_95,WI,10151,Phone,In progress,Yes,No,1007907,synthetic
+2021-04-20,Credit card,unknown,Account information incorrect,unknown,Company_54,TN,20480,Postal mail,Closed with explanation,No,,1000518,synthetic
+2019-11-22,Mortgage,unknown,Incorrect information on your report,unknown,Company_192,MI,53265,Phone,Closed with explanation,No,Yes,1008342,synthetic
+2023-01-02,Mortgage,unknown,Trouble during payment process,unknown,Company_12,TN,57707,Postal mail,Closed with monetary relief,Yes,Yes,1000311,synthetic
+2022-09-24,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_186,IL,11549,Referral,Closed with explanation,Yes,No,1003231,synthetic
+2024-08-26,Checking or savings account,unknown,Trouble during payment process,unknown,Company_67,FL,80540,Fax,Closed with explanation,No,,1007932,synthetic
+2021-08-13,Student loan,unknown,Can't repay your loan,unknown,Company_177,TX,70564,Phone,Closed without relief,No,,1007457,synthetic
+2022-05-09,Student loan,unknown,Account information incorrect,unknown,Company_76,WI,53595,Web,Closed with non-monetary relief,No,,1009783,synthetic
+2024-11-19,Mortgage,unknown,Trouble during payment process,unknown,Company_66,MA,36739,Web,Closed without relief,No,Yes,1005183,synthetic
+2021-05-16,Mortgage,unknown,Communication tactics,unknown,Company_65,WI,97596,Email,Closed with non-monetary relief,Yes,Yes,1008076,synthetic
+2019-06-04,Checking or savings account,unknown,Account information incorrect,unknown,Company_140,VA,91549,Referral,Closed with explanation,Yes,No,1006501,synthetic
+2023-08-15,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_87,NC,75666,Referral,Closed with explanation,Yes,No,1006790,synthetic
+2021-02-13,Credit reporting,unknown,Account information incorrect,unknown,Company_56,TN,11903,Phone,Closed with non-monetary relief,Yes,,1007772,synthetic
+2021-06-24,Credit card,unknown,Incorrect information on your report,unknown,Company_98,AZ,81954,Fax,Closed without relief,No,,1002737,synthetic
+2023-12-22,Payday loan,unknown,Can't repay your loan,unknown,Company_73,MO,11284,Phone,Closed with monetary relief,Yes,,1007841,synthetic
+2021-12-24,Checking or savings account,unknown,Trouble during payment process,unknown,Company_16,NJ,37954,Referral,Closed with non-monetary relief,No,No,1006261,synthetic
+2022-11-20,Mortgage,unknown,Trouble during payment process,unknown,Company_101,NY,79004,Referral,Closed with monetary relief,No,,1008205,synthetic
+2022-10-11,Vehicle loan or lease,unknown,Managing an account,unknown,Company_97,MD,14436,Referral,Closed with explanation,No,Yes,1001247,synthetic
+2021-06-27,Mortgage,unknown,Incorrect information on your report,unknown,Company_177,PA,77980,Referral,Closed with monetary relief,Yes,No,1009335,synthetic
+2021-03-18,Payday loan,unknown,Managing an account,unknown,Company_157,TN,23614,Referral,Closed with monetary relief,No,,1004194,synthetic
+2019-03-08,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_191,IL,82861,Postal mail,Closed with monetary relief,No,No,1008000,synthetic
+2022-08-23,Credit card,unknown,Trouble during payment process,unknown,Company_147,NC,95464,Referral,Closed with explanation,Yes,No,1007377,synthetic
+2024-07-05,Payday loan,unknown,Communication tactics,unknown,Company_22,NY,61148,Postal mail,Closed with monetary relief,No,No,1003434,synthetic
+2019-06-08,Checking or savings account,unknown,Trouble during payment process,unknown,Company_141,FL,24831,Referral,In progress,No,,1005381,synthetic
+2023-03-09,Mortgage,unknown,Problem with a purchase shown on your statement,unknown,Company_132,PA,96188,Phone,Closed with monetary relief,No,,1000958,synthetic
+2024-06-18,Mortgage,unknown,Account information incorrect,unknown,Company_191,NC,36619,Fax,Closed without relief,Yes,,1000416,synthetic
+2022-05-13,Vehicle loan or lease,unknown,Managing an account,unknown,Company_137,MD,87365,Fax,Closed without relief,Yes,No,1005741,synthetic
+2022-04-09,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_134,AZ,18132,Web,Closed with non-monetary relief,Yes,Yes,1006727,synthetic
+2024-01-23,Debt collection,unknown,Can't repay your loan,unknown,Company_41,GA,25943,Fax,Closed without relief,No,No,1004381,synthetic
+2024-11-13,Payday loan,unknown,Trouble during payment process,unknown,Company_153,AZ,68498,Phone,Closed with explanation,No,Yes,1005196,synthetic
+2019-05-10,Checking or savings account,unknown,Trouble during payment process,unknown,Company_145,AZ,98987,Referral,In progress,Yes,,1001112,synthetic
+2019-11-15,Debt collection,unknown,Managing an account,unknown,Company_184,IL,73410,Postal mail,Closed without relief,No,,1002688,synthetic
+2020-06-18,Debt collection,unknown,Trouble during payment process,unknown,Company_186,NC,37326,Referral,In progress,No,Yes,1006472,synthetic
+2019-11-01,Credit reporting,unknown,Communication tactics,unknown,Company_153,MI,71188,Email,Closed with explanation,Yes,Yes,1008819,synthetic
+2021-04-28,Payday loan,unknown,Incorrect information on your report,unknown,Company_154,IN,34077,Referral,In progress,Yes,Yes,1007807,synthetic
+2024-01-25,Mortgage,unknown,Trouble during payment process,unknown,Company_151,NJ,73166,Phone,In progress,Yes,Yes,1003410,synthetic
+2024-04-09,Debt collection,unknown,Communication tactics,unknown,Company_30,MO,39466,Email,Closed with monetary relief,No,Yes,1000080,synthetic
+2024-03-21,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_157,WA,53266,Postal mail,Closed with non-monetary relief,Yes,,1004613,synthetic
+2019-02-25,Debt collection,unknown,Incorrect information on your report,unknown,Company_149,WI,65290,Postal mail,Closed with explanation,No,,1001373,synthetic
+2023-06-24,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_193,NY,39597,Email,Closed without relief,Yes,,1001509,synthetic
+2019-12-24,Credit reporting,unknown,Communication tactics,unknown,Company_22,VA,85189,Email,Closed with monetary relief,Yes,Yes,1006442,synthetic
+2023-01-01,Payday loan,unknown,Trouble during payment process,unknown,Company_183,TN,30524,Web,In progress,Yes,,1003070,synthetic
+2020-10-27,Credit card,unknown,Communication tactics,unknown,Company_171,MD,61419,Referral,Closed with non-monetary relief,Yes,No,1003015,synthetic
+2024-11-20,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_176,GA,40160,Fax,Closed with non-monetary relief,Yes,No,1004822,synthetic
+2023-03-13,Credit card,unknown,Communication tactics,unknown,Company_177,VA,99940,Fax,Closed without relief,Yes,No,1007821,synthetic
+2020-10-17,Student loan,unknown,Can't repay your loan,unknown,Company_18,NC,64387,Referral,In progress,No,Yes,1000092,synthetic
+2019-07-23,Student loan,unknown,Account information incorrect,unknown,Company_117,TN,60538,Postal mail,In progress,No,No,1009420,synthetic
+2022-03-24,Credit card,unknown,Account information incorrect,unknown,Company_150,WA,90008,Email,Closed with monetary relief,No,,1006599,synthetic
+2019-05-09,Checking or savings account,unknown,Account information incorrect,unknown,Company_77,NC,28009,Fax,Closed with non-monetary relief,Yes,,1004442,synthetic
+2023-07-05,Student loan,unknown,Managing an account,unknown,Company_48,GA,98720,Referral,Closed without relief,No,Yes,1007601,synthetic
+2022-03-06,Student loan,unknown,Account information incorrect,unknown,Company_5,WI,36255,Referral,Closed with monetary relief,No,,1003834,synthetic
+2023-01-22,Student loan,unknown,Trouble during payment process,unknown,Company_120,OH,57560,Referral,In progress,No,,1009701,synthetic
+2023-10-26,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_161,NJ,90397,Phone,Closed with monetary relief,No,,1004321,synthetic
+2024-01-24,Payday loan,unknown,Trouble during payment process,unknown,Company_191,PA,64178,Referral,Closed with non-monetary relief,No,,1003393,synthetic
+2021-11-26,Credit reporting,unknown,Can't repay your loan,unknown,Company_63,FL,72809,Postal mail,Closed with explanation,No,Yes,1004751,synthetic
+2024-08-05,Checking or savings account,unknown,Incorrect information on your report,unknown,Company_31,OH,56493,Postal mail,Closed with explanation,Yes,Yes,1007228,synthetic
+2020-10-14,Checking or savings account,unknown,Managing an account,unknown,Company_171,WI,95085,Phone,In progress,No,Yes,1009190,synthetic
+2022-02-15,Mortgage,unknown,Managing an account,unknown,Company_109,MI,90051,Referral,Closed with monetary relief,No,,1002360,synthetic
+2022-02-20,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_50,NJ,67216,Web,Closed with monetary relief,Yes,Yes,1001147,synthetic
+2022-09-19,Student loan,unknown,Communication tactics,unknown,Company_136,MO,82875,Referral,Closed without relief,No,Yes,1005665,synthetic
+2021-10-26,Debt collection,unknown,Incorrect information on your report,unknown,Company_102,NY,45432,Web,Closed with explanation,Yes,No,1008074,synthetic
+2024-06-19,Credit reporting,unknown,Incorrect information on your report,unknown,Company_124,TX,42552,Phone,Closed without relief,No,Yes,1004942,synthetic
+2020-11-21,Student loan,unknown,Can't repay your loan,unknown,Company_118,MO,95316,Postal mail,In progress,Yes,No,1003662,synthetic
+2023-01-19,Student loan,unknown,Incorrect information on your report,unknown,Company_141,TN,65478,Phone,Closed with monetary relief,Yes,Yes,1001562,synthetic
+2020-03-04,Debt collection,unknown,Communication tactics,unknown,Company_199,MA,83127,Email,In progress,No,No,1004112,synthetic
+2022-08-08,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_11,IL,33035,Fax,Closed with monetary relief,Yes,,1009049,synthetic
+2020-09-22,Credit reporting,unknown,Managing an account,unknown,Company_183,CA,52801,Postal mail,Closed with explanation,Yes,No,1009275,synthetic
+2021-11-05,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_132,CA,37212,Email,Closed with explanation,Yes,Yes,1008537,synthetic
+2021-11-13,Debt collection,unknown,Incorrect information on your report,unknown,Company_22,TX,80442,Referral,Closed without relief,Yes,,1000794,synthetic
+2024-11-21,Payday loan,unknown,Trouble during payment process,unknown,Company_37,IL,38534,Phone,Closed with monetary relief,No,Yes,1005853,synthetic
+2022-10-26,Mortgage,unknown,Can't repay your loan,unknown,Company_19,OH,48971,Postal mail,Closed with monetary relief,Yes,,1007618,synthetic
+2022-02-09,Checking or savings account,unknown,Managing an account,unknown,Company_135,FL,90312,Referral,Closed with monetary relief,Yes,No,1001593,synthetic
+2023-05-08,Credit card,unknown,Incorrect information on your report,unknown,Company_44,IL,73605,Email,In progress,Yes,Yes,1007417,synthetic
+2021-01-01,Vehicle loan or lease,unknown,Managing an account,unknown,Company_126,VA,78134,Phone,Closed with non-monetary relief,No,No,1005266,synthetic
+2022-12-14,Checking or savings account,unknown,Can't repay your loan,unknown,Company_166,MA,10917,Email,Closed with non-monetary relief,No,,1007146,synthetic
+2020-09-12,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_114,TX,36680,Referral,In progress,Yes,No,1000088,synthetic
+2022-06-22,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_101,CA,54668,Fax,Closed with monetary relief,Yes,Yes,1008694,synthetic
+2020-12-27,Student loan,unknown,Managing an account,unknown,Company_193,MD,57552,Referral,Closed with monetary relief,Yes,No,1009731,synthetic
+2023-06-12,Credit card,unknown,Trouble during payment process,unknown,Company_27,GA,79375,Referral,Closed with monetary relief,No,No,1009445,synthetic
+2023-11-27,Credit card,unknown,Trouble during payment process,unknown,Company_133,WI,20807,Email,In progress,No,Yes,1006753,synthetic
+2023-04-28,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_149,AZ,36997,Phone,Closed with non-monetary relief,No,No,1003501,synthetic
+2024-07-12,Credit reporting,unknown,Trouble during payment process,unknown,Company_34,NC,20038,Fax,Closed without relief,No,,1002233,synthetic
+2022-02-16,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_176,NJ,63265,Phone,Closed with explanation,No,Yes,1002802,synthetic
+2022-06-06,Checking or savings account,unknown,Account information incorrect,unknown,Company_191,NJ,73711,Phone,Closed with explanation,Yes,Yes,1004423,synthetic
+2019-05-13,Mortgage,unknown,Trouble during payment process,unknown,Company_49,VA,42765,Referral,In progress,No,,1005662,synthetic
+2020-11-03,Credit reporting,unknown,Account information incorrect,unknown,Company_19,MO,63367,Fax,In progress,Yes,No,1007169,synthetic
+2021-01-16,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_102,IN,96267,Postal mail,In progress,Yes,No,1008336,synthetic
+2019-12-03,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_134,MI,47681,Phone,Closed with non-monetary relief,No,No,1002147,synthetic
+2023-03-26,Credit card,unknown,Managing an account,unknown,Company_27,AZ,52840,Fax,Closed with explanation,No,No,1007968,synthetic
+2020-08-02,Checking or savings account,unknown,Managing an account,unknown,Company_115,GA,46397,Referral,Closed with non-monetary relief,No,Yes,1006550,synthetic
+2022-03-04,Vehicle loan or lease,unknown,Trouble during payment process,unknown,Company_85,TN,97286,Web,Closed with explanation,Yes,No,1007642,synthetic
+2023-05-20,Credit card,unknown,Managing an account,unknown,Company_148,TN,81041,Email,Closed with non-monetary relief,Yes,Yes,1006163,synthetic
+2019-01-28,Mortgage,unknown,Managing an account,unknown,Company_13,CA,45944,Web,Closed with non-monetary relief,No,No,1001494,synthetic
+2024-09-27,Payday loan,unknown,Incorrect information on your report,unknown,Company_114,PA,63970,Postal mail,Closed with monetary relief,Yes,No,1007695,synthetic
+2020-10-23,Mortgage,unknown,Incorrect information on your report,unknown,Company_189,NC,31141,Fax,Closed with monetary relief,Yes,,1007093,synthetic
+2021-12-02,Mortgage,unknown,Account information incorrect,unknown,Company_78,WA,34672,Referral,In progress,Yes,,1001408,synthetic
+2022-12-18,Student loan,unknown,Can't repay your loan,unknown,Company_99,VA,80717,Email,Closed with monetary relief,No,,1006690,synthetic
+2021-04-27,Checking or savings account,unknown,Incorrect information on your report,unknown,Company_12,WI,62858,Fax,Closed with non-monetary relief,Yes,,1003400,synthetic
+2021-09-17,Checking or savings account,unknown,Can't repay your loan,unknown,Company_43,NC,73156,Referral,Closed with non-monetary relief,Yes,No,1000108,synthetic
+2023-05-20,Credit card,unknown,Can't repay your loan,unknown,Company_139,VA,25679,Referral,Closed without relief,No,No,1005635,synthetic
+2022-11-11,Payday loan,unknown,Trouble during payment process,unknown,Company_39,MI,65004,Web,Closed with non-monetary relief,No,Yes,1008481,synthetic
+2019-12-16,Student loan,unknown,Can't repay your loan,unknown,Company_71,MA,28023,Postal mail,Closed with monetary relief,Yes,,1006603,synthetic
+2022-03-22,Checking or savings account,unknown,Can't repay your loan,unknown,Company_148,NY,29305,Postal mail,Closed with explanation,Yes,Yes,1001090,synthetic
+2023-09-03,Credit reporting,unknown,Can't repay your loan,unknown,Company_139,MI,79397,Phone,Closed without relief,Yes,Yes,1005559,synthetic
+2024-02-09,Credit card,unknown,Communication tactics,unknown,Company_150,WA,82996,Email,Closed with explanation,Yes,No,1009411,synthetic
+2024-07-05,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_182,IN,47683,Email,In progress,Yes,Yes,1008142,synthetic
+2023-04-06,Student loan,unknown,Problem with a purchase shown on your statement,unknown,Company_59,MD,49290,Email,Closed without relief,Yes,Yes,1008663,synthetic
+2020-09-13,Checking or savings account,unknown,Trouble during payment process,unknown,Company_86,CA,49684,Postal mail,Closed with non-monetary relief,No,Yes,1006595,synthetic
+2024-03-09,Checking or savings account,unknown,Communication tactics,unknown,Company_170,FL,93726,Postal mail,Closed with non-monetary relief,No,,1000623,synthetic
+2019-04-01,Payday loan,unknown,Can't repay your loan,unknown,Company_92,IN,60450,Phone,In progress,Yes,No,1006870,synthetic
+2022-02-23,Credit reporting,unknown,Managing an account,unknown,Company_28,CA,84012,Fax,Closed with explanation,No,No,1004813,synthetic
+2019-02-01,Credit card,unknown,Can't repay your loan,unknown,Company_96,PA,31680,Email,Closed with explanation,Yes,No,1006552,synthetic
+2020-10-28,Mortgage,unknown,Incorrect information on your report,unknown,Company_63,TX,35498,Postal mail,Closed with explanation,Yes,Yes,1007529,synthetic
+2022-10-25,Student loan,unknown,Incorrect information on your report,unknown,Company_199,NJ,79298,Phone,Closed with explanation,Yes,Yes,1005795,synthetic
+2023-03-21,Vehicle loan or lease,unknown,Trouble during payment process,unknown,Company_63,IN,22516,Referral,Closed with non-monetary relief,No,No,1007436,synthetic
+2022-03-17,Student loan,unknown,Problem with a purchase shown on your statement,unknown,Company_181,NY,87910,Postal mail,Closed with explanation,No,,1004217,synthetic
+2020-03-06,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_183,NC,99001,Referral,In progress,No,No,1005940,synthetic
+2022-05-09,Credit card,unknown,Incorrect information on your report,unknown,Company_171,CA,32690,Phone,Closed with monetary relief,No,Yes,1008500,synthetic
+2022-06-18,Credit card,unknown,Can't repay your loan,unknown,Company_58,AZ,63439,Email,Closed with monetary relief,Yes,Yes,1006428,synthetic
+2022-09-17,Payday loan,unknown,Managing an account,unknown,Company_112,NY,85282,Phone,Closed with explanation,Yes,,1006826,synthetic
+2020-09-04,Student loan,unknown,Problem with a purchase shown on your statement,unknown,Company_176,VA,84184,Fax,Closed with monetary relief,No,Yes,1004130,synthetic
+2022-04-22,Checking or savings account,unknown,Account information incorrect,unknown,Company_188,VA,48647,Postal mail,Closed with non-monetary relief,No,Yes,1007801,synthetic
+2020-11-13,Student loan,unknown,Can't repay your loan,unknown,Company_96,MD,90182,Web,Closed with non-monetary relief,Yes,No,1007753,synthetic
+2020-10-10,Mortgage,unknown,Trouble during payment process,unknown,Company_174,TN,58122,Fax,Closed with non-monetary relief,Yes,No,1004721,synthetic
+2021-06-16,Debt collection,unknown,Managing an account,unknown,Company_86,TN,39829,Postal mail,In progress,Yes,,1001650,synthetic
+2023-09-04,Student loan,unknown,Account information incorrect,unknown,Company_111,WI,60210,Referral,Closed without relief,Yes,Yes,1004140,synthetic
+2024-06-01,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_100,AZ,23575,Fax,Closed without relief,Yes,Yes,1001617,synthetic
+2020-02-05,Mortgage,unknown,Trouble during payment process,unknown,Company_31,MD,19077,Referral,Closed with explanation,No,No,1002029,synthetic
+2022-01-03,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_78,PA,32885,Phone,Closed with non-monetary relief,No,,1008517,synthetic
+2019-02-15,Payday loan,unknown,Communication tactics,unknown,Company_156,AZ,98438,Phone,Closed with explanation,No,No,1004575,synthetic
+2019-08-05,Mortgage,unknown,Problem with a purchase shown on your statement,unknown,Company_36,CA,39293,Email,Closed with monetary relief,Yes,Yes,1003992,synthetic
+2020-06-23,Debt collection,unknown,Can't repay your loan,unknown,Company_140,IL,14168,Web,In progress,No,No,1007376,synthetic
+2019-08-25,Checking or savings account,unknown,Problem with a purchase shown on your statement,unknown,Company_89,IN,46309,Referral,In progress,No,Yes,1006149,synthetic
+2021-04-20,Payday loan,unknown,Incorrect information on your report,unknown,Company_136,WA,86001,Fax,Closed with explanation,Yes,No,1004908,synthetic
+2022-08-12,Credit reporting,unknown,Trouble during payment process,unknown,Company_117,VA,43006,Referral,Closed with non-monetary relief,Yes,Yes,1005026,synthetic
+2020-08-24,Mortgage,unknown,Can't repay your loan,unknown,Company_81,TN,13760,Email,Closed with monetary relief,No,Yes,1008260,synthetic
+2019-05-21,Mortgage,unknown,Trouble during payment process,unknown,Company_108,GA,50082,Fax,Closed without relief,No,No,1004731,synthetic
+2022-08-26,Mortgage,unknown,Incorrect information on your report,unknown,Company_150,NY,57124,Postal mail,Closed with explanation,Yes,Yes,1007548,synthetic
+2023-11-19,Vehicle loan or lease,unknown,Trouble during payment process,unknown,Company_78,MD,20301,Web,Closed with monetary relief,No,Yes,1008134,synthetic
+2023-11-26,Credit card,unknown,Communication tactics,unknown,Company_107,MA,89791,Fax,Closed with monetary relief,No,,1001606,synthetic
+2019-07-20,Mortgage,unknown,Problem with a purchase shown on your statement,unknown,Company_161,AZ,24240,Web,In progress,No,,1004773,synthetic
+2022-04-27,Checking or savings account,unknown,Managing an account,unknown,Company_103,FL,52261,Email,Closed without relief,No,,1008109,synthetic
+2023-02-20,Payday loan,unknown,Managing an account,unknown,Company_29,OH,37964,Fax,Closed with explanation,No,Yes,1006951,synthetic
+2022-02-20,Payday loan,unknown,Account information incorrect,unknown,Company_12,IN,22295,Fax,Closed without relief,Yes,Yes,1006004,synthetic
+2019-02-09,Student loan,unknown,Account information incorrect,unknown,Company_176,WA,82715,Referral,Closed with explanation,No,No,1007728,synthetic
+2022-08-09,Mortgage,unknown,Communication tactics,unknown,Company_78,NY,30298,Phone,Closed without relief,Yes,,1003541,synthetic
+2022-04-20,Debt collection,unknown,Can't repay your loan,unknown,Company_68,IN,36433,Referral,Closed without relief,No,Yes,1000388,synthetic
+2024-12-28,Mortgage,unknown,Managing an account,unknown,Company_49,IL,14935,Web,Closed with non-monetary relief,No,,1001794,synthetic
+2021-06-09,Mortgage,unknown,Account information incorrect,unknown,Company_92,MA,33563,Referral,Closed with monetary relief,No,No,1008731,synthetic
+2024-11-06,Checking or savings account,unknown,Problem with a purchase shown on your statement,unknown,Company_61,NJ,18044,Email,In progress,No,,1004919,synthetic
+2023-09-12,Checking or savings account,unknown,Can't repay your loan,unknown,Company_81,NJ,40794,Email,Closed without relief,Yes,No,1005537,synthetic
+2023-04-11,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_2,FL,75214,Phone,Closed without relief,Yes,No,1003872,synthetic
+2021-10-03,Checking or savings account,unknown,Incorrect information on your report,unknown,Company_29,WA,78993,Postal mail,Closed with explanation,No,Yes,1008868,synthetic
+2023-02-01,Student loan,unknown,Can't repay your loan,unknown,Company_74,MO,11956,Email,In progress,No,No,1002254,synthetic
+2019-07-24,Credit card,unknown,Managing an account,unknown,Company_76,WI,84475,Fax,Closed with explanation,Yes,No,1003412,synthetic
+2019-05-02,Mortgage,unknown,Can't repay your loan,unknown,Company_45,NC,23631,Email,Closed without relief,Yes,Yes,1005459,synthetic
+2020-02-12,Payday loan,unknown,Managing an account,unknown,Company_82,TX,60729,Postal mail,Closed with explanation,No,No,1004955,synthetic
+2022-04-13,Checking or savings account,unknown,Communication tactics,unknown,Company_10,NC,78674,Postal mail,Closed with explanation,No,Yes,1007396,synthetic
+2024-05-26,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_173,MA,74048,Postal mail,Closed with non-monetary relief,Yes,,1005414,synthetic
+2019-05-25,Payday loan,unknown,Can't repay your loan,unknown,Company_11,NY,41947,Web,Closed with monetary relief,No,No,1007399,synthetic
+2023-02-26,Payday loan,unknown,Managing an account,unknown,Company_25,CA,57044,Phone,Closed with non-monetary relief,No,Yes,1007414,synthetic
+2023-01-16,Mortgage,unknown,Communication tactics,unknown,Company_187,MA,19036,Fax,In progress,Yes,No,1009100,synthetic
+2019-08-03,Mortgage,unknown,Can't repay your loan,unknown,Company_139,FL,65587,Fax,Closed with monetary relief,Yes,Yes,1004851,synthetic
+2019-10-17,Payday loan,unknown,Trouble during payment process,unknown,Company_19,IL,65884,Postal mail,Closed without relief,Yes,Yes,1002025,synthetic
+2023-11-18,Debt collection,unknown,Account information incorrect,unknown,Company_99,GA,55135,Postal mail,In progress,Yes,,1002615,synthetic
+2024-12-03,Student loan,unknown,Can't repay your loan,unknown,Company_144,MI,17262,Phone,In progress,No,Yes,1007388,synthetic
+2021-09-01,Credit card,unknown,Can't repay your loan,unknown,Company_86,GA,67492,Email,Closed with monetary relief,No,,1002926,synthetic
+2019-01-05,Credit card,unknown,Managing an account,unknown,Company_25,GA,36777,Web,Closed without relief,Yes,,1001121,synthetic
+2020-05-15,Student loan,unknown,Managing an account,unknown,Company_62,MD,56977,Web,Closed without relief,No,Yes,1002910,synthetic
+2019-01-08,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_35,TN,52543,Web,Closed without relief,Yes,,1008146,synthetic
+2022-12-09,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_153,OH,79573,Postal mail,Closed with monetary relief,No,Yes,1007383,synthetic
+2024-10-01,Checking or savings account,unknown,Can't repay your loan,unknown,Company_161,WI,84801,Web,Closed with non-monetary relief,No,Yes,1003482,synthetic
+2023-05-07,Credit card,unknown,Managing an account,unknown,Company_142,MI,78332,Referral,Closed with monetary relief,Yes,Yes,1000795,synthetic
+2021-04-10,Student loan,unknown,Account information incorrect,unknown,Company_26,PA,83608,Referral,Closed with explanation,Yes,,1001575,synthetic
+2024-11-06,Mortgage,unknown,Managing an account,unknown,Company_58,FL,20520,Email,Closed without relief,No,No,1006176,synthetic
+2020-08-02,Checking or savings account,unknown,Managing an account,unknown,Company_67,GA,28429,Postal mail,Closed with non-monetary relief,Yes,Yes,1006266,synthetic
+2023-06-02,Debt collection,unknown,Communication tactics,unknown,Company_9,NJ,90525,Referral,Closed with monetary relief,No,Yes,1002458,synthetic
+2023-10-13,Debt collection,unknown,Account information incorrect,unknown,Company_109,WA,70510,Web,Closed with explanation,No,,1003312,synthetic
+2021-03-26,Vehicle loan or lease,unknown,Communication tactics,unknown,Company_102,IL,70370,Web,Closed with monetary relief,Yes,Yes,1001253,synthetic
+2019-12-06,Mortgage,unknown,Managing an account,unknown,Company_88,PA,15673,Email,Closed with non-monetary relief,No,No,1006834,synthetic
+2022-01-28,Credit card,unknown,Can't repay your loan,unknown,Company_115,VA,88786,Postal mail,Closed with explanation,Yes,,1008794,synthetic
+2022-09-07,Checking or savings account,unknown,Can't repay your loan,unknown,Company_128,WA,70018,Email,In progress,Yes,Yes,1003837,synthetic
+2021-12-18,Checking or savings account,unknown,Incorrect information on your report,unknown,Company_87,NJ,97700,Email,Closed without relief,No,,1004398,synthetic
+2022-01-27,Checking or savings account,unknown,Communication tactics,unknown,Company_16,NY,34108,Referral,In progress,Yes,,1003595,synthetic
+2021-08-18,Debt collection,unknown,Can't repay your loan,unknown,Company_66,FL,12231,Fax,Closed with explanation,No,No,1006621,synthetic
+2019-10-11,Checking or savings account,unknown,Can't repay your loan,unknown,Company_63,WA,24729,Email,Closed with monetary relief,No,Yes,1008382,synthetic
+2024-04-14,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_32,TX,40267,Referral,Closed with non-monetary relief,No,No,1002124,synthetic
+2023-02-24,Credit reporting,unknown,Can't repay your loan,unknown,Company_2,IN,51973,Referral,Closed without relief,Yes,No,1003238,synthetic
+2024-11-17,Credit card,unknown,Account information incorrect,unknown,Company_90,NC,80584,Phone,Closed with non-monetary relief,No,Yes,1005403,synthetic
+2019-07-21,Payday loan,unknown,Problem with a purchase shown on your statement,unknown,Company_142,PA,92033,Referral,Closed without relief,No,,1005998,synthetic
+2022-04-25,Credit card,unknown,Trouble during payment process,unknown,Company_168,MI,54892,Email,Closed with monetary relief,No,No,1005938,synthetic
+2022-10-05,Student loan,unknown,Account information incorrect,unknown,Company_63,CA,15624,Referral,Closed with non-monetary relief,No,No,1002045,synthetic
+2019-11-25,Credit card,unknown,Trouble during payment process,unknown,Company_97,NJ,96588,Email,Closed without relief,No,Yes,1001578,synthetic
+2021-03-18,Mortgage,unknown,Managing an account,unknown,Company_83,TN,12552,Web,Closed with non-monetary relief,No,Yes,1000014,synthetic
+2023-06-03,Debt collection,unknown,Can't repay your loan,unknown,Company_85,OH,78477,Email,Closed with explanation,No,,1002673,synthetic
+2020-02-08,Payday loan,unknown,Can't repay your loan,unknown,Company_198,MI,45480,Postal mail,Closed with explanation,No,No,1007016,synthetic
+2019-03-17,Payday loan,unknown,Trouble during payment process,unknown,Company_63,MO,18584,Postal mail,Closed with non-monetary relief,No,No,1008720,synthetic
+2024-07-16,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_24,NJ,34587,Fax,Closed with non-monetary relief,No,Yes,1008849,synthetic
+2021-12-08,Mortgage,unknown,Communication tactics,unknown,Company_82,MA,73400,Phone,Closed with explanation,Yes,Yes,1004812,synthetic
+2022-02-05,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_38,MD,64171,Email,Closed without relief,Yes,,1001084,synthetic
+2022-02-19,Credit card,unknown,Can't repay your loan,unknown,Company_162,IN,24360,Email,Closed with non-monetary relief,Yes,No,1004983,synthetic
+2019-08-17,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_131,IL,91773,Referral,Closed with monetary relief,Yes,,1007155,synthetic
+2023-04-10,Credit card,unknown,Managing an account,unknown,Company_184,TX,17272,Phone,In progress,Yes,No,1002884,synthetic
+2022-06-27,Student loan,unknown,Trouble during payment process,unknown,Company_61,MD,51681,Email,Closed with non-monetary relief,Yes,,1000333,synthetic
+2021-07-01,Checking or savings account,unknown,Communication tactics,unknown,Company_175,MA,48980,Web,Closed without relief,Yes,No,1007204,synthetic
+2023-11-04,Student loan,unknown,Account information incorrect,unknown,Company_116,IL,14483,Fax,Closed with non-monetary relief,No,,1004367,synthetic
+2022-12-18,Payday loan,unknown,Account information incorrect,unknown,Company_152,IL,64484,Web,Closed with non-monetary relief,No,,1003079,synthetic
+2021-07-03,Debt collection,unknown,Communication tactics,unknown,Company_129,IL,38742,Phone,Closed with monetary relief,Yes,,1007203,synthetic
+2023-12-11,Checking or savings account,unknown,Communication tactics,unknown,Company_123,OH,82833,Email,Closed with non-monetary relief,Yes,,1009909,synthetic
+2022-04-24,Credit reporting,unknown,Can't repay your loan,unknown,Company_52,WA,54333,Postal mail,Closed without relief,No,No,1008864,synthetic
+2022-06-04,Debt collection,unknown,Managing an account,unknown,Company_140,IL,99353,Fax,Closed with explanation,No,,1000263,synthetic
+2020-04-03,Student loan,unknown,Incorrect information on your report,unknown,Company_100,TN,75322,Phone,Closed with non-monetary relief,Yes,,1004337,synthetic
+2024-02-23,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_195,TN,70683,Web,Closed with explanation,No,No,1008895,synthetic
+2024-12-13,Debt collection,unknown,Incorrect information on your report,unknown,Company_82,NY,19903,Postal mail,Closed with explanation,Yes,No,1008447,synthetic
+2020-05-13,Payday loan,unknown,Communication tactics,unknown,Company_180,CA,18008,Referral,Closed with monetary relief,No,,1005903,synthetic
+2024-09-09,Checking or savings account,unknown,Account information incorrect,unknown,Company_180,MD,72878,Web,Closed with monetary relief,Yes,Yes,1001498,synthetic
+2021-08-16,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_35,WI,18834,Fax,Closed with non-monetary relief,Yes,,1004190,synthetic
+2020-06-03,Student loan,unknown,Account information incorrect,unknown,Company_159,IN,69473,Referral,Closed with non-monetary relief,No,,1007485,synthetic
+2021-02-06,Credit reporting,unknown,Can't repay your loan,unknown,Company_170,NC,10922,Web,In progress,Yes,,1009643,synthetic
+2022-06-28,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_148,OH,12589,Email,Closed with explanation,Yes,Yes,1008310,synthetic
+2019-11-02,Checking or savings account,unknown,Can't repay your loan,unknown,Company_109,GA,60751,Email,Closed with monetary relief,Yes,,1007590,synthetic
+2020-02-06,Student loan,unknown,Incorrect information on your report,unknown,Company_29,MA,90967,Postal mail,Closed with non-monetary relief,No,Yes,1000500,synthetic
+2020-07-09,Student loan,unknown,Managing an account,unknown,Company_134,MA,84328,Postal mail,Closed with explanation,No,,1009155,synthetic
+2023-03-03,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_122,VA,85868,Referral,Closed with monetary relief,Yes,No,1009414,synthetic
+2019-09-02,Student loan,unknown,Communication tactics,unknown,Company_174,WA,92745,Fax,Closed with explanation,No,Yes,1003095,synthetic
+2021-09-18,Credit card,unknown,Can't repay your loan,unknown,Company_21,MO,51610,Fax,Closed with monetary relief,Yes,No,1004631,synthetic
+2019-11-01,Payday loan,unknown,Trouble during payment process,unknown,Company_166,IL,88792,Web,Closed with monetary relief,No,,1000367,synthetic
+2021-01-28,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_15,TN,39880,Email,Closed with monetary relief,No,,1004058,synthetic
+2019-02-02,Payday loan,unknown,Can't repay your loan,unknown,Company_111,OH,15078,Phone,In progress,No,No,1008174,synthetic
+2020-02-16,Credit card,unknown,Communication tactics,unknown,Company_193,CA,50425,Phone,Closed with monetary relief,Yes,No,1004630,synthetic
+2020-06-03,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_125,MI,76985,Email,Closed without relief,Yes,No,1006070,synthetic
+2022-12-15,Mortgage,unknown,Communication tactics,unknown,Company_51,AZ,92593,Phone,Closed with monetary relief,No,Yes,1002664,synthetic
+2019-05-01,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_73,WA,75564,Phone,Closed with non-monetary relief,No,,1001026,synthetic
+2020-10-26,Mortgage,unknown,Communication tactics,unknown,Company_104,WA,62732,Postal mail,Closed with non-monetary relief,Yes,No,1005908,synthetic
+2023-11-20,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_147,MA,71764,Web,Closed with monetary relief,Yes,,1005050,synthetic
+2024-09-13,Vehicle loan or lease,unknown,Managing an account,unknown,Company_97,IL,34900,Phone,Closed with non-monetary relief,No,,1006328,synthetic
+2021-10-14,Checking or savings account,unknown,Account information incorrect,unknown,Company_49,MO,84432,Email,Closed with monetary relief,No,No,1009733,synthetic
+2020-03-26,Credit card,unknown,Account information incorrect,unknown,Company_25,WI,69604,Fax,Closed without relief,Yes,,1001691,synthetic
+2021-03-01,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_181,MI,72116,Referral,In progress,Yes,,1000673,synthetic
+2023-04-18,Vehicle loan or lease,unknown,Managing an account,unknown,Company_77,VA,83700,Fax,Closed with monetary relief,Yes,No,1005572,synthetic
+2024-03-02,Debt collection,unknown,Managing an account,unknown,Company_184,VA,60263,Web,In progress,Yes,No,1005766,synthetic
+2023-05-03,Payday loan,unknown,Incorrect information on your report,unknown,Company_123,WA,21355,Postal mail,Closed without relief,No,,1005156,synthetic
+2024-01-23,Debt collection,unknown,Incorrect information on your report,unknown,Company_142,WA,50536,Email,Closed with non-monetary relief,Yes,,1000733,synthetic
+2021-08-25,Payday loan,unknown,Managing an account,unknown,Company_115,OH,86927,Fax,Closed with monetary relief,No,,1003526,synthetic
+2024-10-12,Mortgage,unknown,Account information incorrect,unknown,Company_197,MI,52312,Referral,Closed without relief,Yes,No,1000568,synthetic
+2020-08-17,Credit reporting,unknown,Communication tactics,unknown,Company_52,IN,11436,Web,Closed with monetary relief,Yes,Yes,1009187,synthetic
+2020-06-24,Student loan,unknown,Account information incorrect,unknown,Company_29,WA,35122,Web,Closed with explanation,No,,1002922,synthetic
+2022-06-03,Vehicle loan or lease,unknown,Communication tactics,unknown,Company_25,TN,96911,Fax,Closed with monetary relief,Yes,Yes,1007911,synthetic
+2024-08-14,Credit card,unknown,Communication tactics,unknown,Company_66,VA,39957,Referral,Closed with non-monetary relief,No,No,1001558,synthetic
+2019-10-28,Credit reporting,unknown,Managing an account,unknown,Company_175,GA,75230,Fax,Closed with monetary relief,Yes,No,1000101,synthetic
+2023-07-11,Student loan,unknown,Managing an account,unknown,Company_79,FL,27896,Fax,Closed with non-monetary relief,Yes,No,1003007,synthetic
+2019-02-03,Debt collection,unknown,Incorrect information on your report,unknown,Company_74,WI,33637,Referral,In progress,No,No,1007201,synthetic
+2021-03-13,Credit reporting,unknown,Incorrect information on your report,unknown,Company_140,IL,71736,Web,Closed with explanation,Yes,Yes,1000303,synthetic
+2020-02-18,Credit reporting,unknown,Managing an account,unknown,Company_153,WI,39581,Fax,Closed without relief,No,No,1000076,synthetic
+2020-01-28,Student loan,unknown,Managing an account,unknown,Company_145,AZ,96132,Email,In progress,Yes,,1006754,synthetic
+2020-12-01,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_8,TX,87876,Email,Closed with non-monetary relief,Yes,No,1008629,synthetic
+2021-08-07,Credit card,unknown,Incorrect information on your report,unknown,Company_168,MD,71787,Postal mail,Closed with non-monetary relief,No,Yes,1001208,synthetic
+2021-08-22,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_99,WI,56543,Email,Closed with monetary relief,No,Yes,1007742,synthetic
+2024-01-04,Vehicle loan or lease,unknown,Managing an account,unknown,Company_192,WI,63422,Postal mail,Closed with explanation,No,No,1008214,synthetic
+2019-03-25,Credit card,unknown,Can't repay your loan,unknown,Company_56,NJ,27415,Fax,Closed with monetary relief,Yes,,1008944,synthetic
+2020-11-03,Credit card,unknown,Account information incorrect,unknown,Company_106,MA,11861,Fax,In progress,Yes,No,1008413,synthetic
+2020-01-11,Vehicle loan or lease,unknown,Communication tactics,unknown,Company_9,IN,36750,Email,Closed without relief,Yes,,1001775,synthetic
+2024-09-04,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_106,NJ,85941,Referral,Closed with non-monetary relief,No,,1003473,synthetic
+2024-03-16,Mortgage,unknown,Trouble during payment process,unknown,Company_108,TN,27625,Email,In progress,No,No,1000483,synthetic
+2022-12-05,Credit card,unknown,Managing an account,unknown,Company_93,OH,63643,Fax,In progress,Yes,Yes,1002189,synthetic
+2020-10-14,Student loan,unknown,Account information incorrect,unknown,Company_26,NJ,36941,Phone,Closed without relief,No,,1000346,synthetic
+2019-01-02,Student loan,unknown,Incorrect information on your report,unknown,Company_81,IN,79229,Email,Closed without relief,No,Yes,1005481,synthetic
+2019-09-08,Debt collection,unknown,Managing an account,unknown,Company_136,IN,11210,Postal mail,In progress,No,Yes,1008361,synthetic
+2022-04-26,Checking or savings account,unknown,Problem with a purchase shown on your statement,unknown,Company_37,VA,17736,Postal mail,Closed with monetary relief,Yes,,1001472,synthetic
+2019-05-21,Vehicle loan or lease,unknown,Can't repay your loan,unknown,Company_126,IN,24577,Phone,Closed with explanation,No,No,1005100,synthetic
+2021-05-22,Credit reporting,unknown,Communication tactics,unknown,Company_96,IN,97480,Referral,In progress,Yes,,1006765,synthetic
+2024-05-28,Student loan,unknown,Account information incorrect,unknown,Company_169,MA,22041,Email,Closed with explanation,Yes,,1008706,synthetic
+2019-10-28,Checking or savings account,unknown,Can't repay your loan,unknown,Company_11,NY,46424,Referral,Closed with explanation,Yes,No,1004929,synthetic
+2019-10-08,Checking or savings account,unknown,Can't repay your loan,unknown,Company_43,FL,18336,Referral,Closed without relief,No,No,1006329,synthetic
+2019-01-24,Checking or savings account,unknown,Communication tactics,unknown,Company_155,NY,39907,Referral,Closed with explanation,Yes,Yes,1002609,synthetic
+2021-03-07,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_24,WA,22676,Referral,Closed with non-monetary relief,No,Yes,1000003,synthetic
+2023-02-28,Credit reporting,unknown,Communication tactics,unknown,Company_67,WA,42105,Web,Closed with explanation,Yes,,1002213,synthetic
+2022-08-13,Student loan,unknown,Account information incorrect,unknown,Company_138,TN,48041,Phone,Closed with explanation,No,No,1004827,synthetic
+2024-10-03,Student loan,unknown,Managing an account,unknown,Company_100,IN,59055,Postal mail,In progress,No,Yes,1000856,synthetic
+2019-10-21,Checking or savings account,unknown,Problem with a purchase shown on your statement,unknown,Company_22,CA,33798,Fax,Closed with monetary relief,No,Yes,1006977,synthetic
+2022-04-08,Credit reporting,unknown,Problem with a purchase shown on your statement,unknown,Company_100,AZ,50038,Fax,Closed with explanation,No,Yes,1005885,synthetic
+2024-06-09,Student loan,unknown,Can't repay your loan,unknown,Company_19,NC,18177,Postal mail,Closed without relief,No,Yes,1000624,synthetic
+2024-05-23,Vehicle loan or lease,unknown,Communication tactics,unknown,Company_125,NJ,86278,Web,Closed with explanation,No,,1000290,synthetic
+2022-03-13,Mortgage,unknown,Managing an account,unknown,Company_74,WA,40046,Fax,Closed without relief,No,No,1002018,synthetic
+2023-11-23,Payday loan,unknown,Communication tactics,unknown,Company_78,MD,27295,Referral,Closed with monetary relief,No,Yes,1000668,synthetic
+2022-02-13,Debt collection,unknown,Incorrect information on your report,unknown,Company_81,TN,77236,Referral,In progress,Yes,,1008921,synthetic
+2023-03-14,Vehicle loan or lease,unknown,Incorrect information on your report,unknown,Company_15,FL,61635,Phone,Closed with non-monetary relief,Yes,,1008264,synthetic
+2023-03-24,Vehicle loan or lease,unknown,Problem with a purchase shown on your statement,unknown,Company_56,OH,50955,Phone,Closed without relief,No,,1009696,synthetic
+2023-12-28,Credit card,unknown,Problem with a purchase shown on your statement,unknown,Company_5,TN,38628,Email,Closed with monetary relief,Yes,,1001631,synthetic
+2021-06-08,Student loan,unknown,Incorrect information on your report,unknown,Company_13,NY,61426,Fax,In progress,Yes,Yes,1005170,synthetic
+2023-01-25,Credit card,unknown,Managing an account,unknown,Company_123,WI,91445,Fax,Closed without relief,Yes,No,1007205,synthetic
+2023-07-18,Debt collection,unknown,Problem with a purchase shown on your statement,unknown,Company_10,PA,84047,Web,Closed with non-monetary relief,No,,1002522,synthetic
+2019-09-03,Vehicle loan or lease,unknown,Account information incorrect,unknown,Company_170,WI,82783,Email,Closed with non-monetary relief,No,No,1002215,synthetic
+2023-11-12,Debt collection,unknown,Communication tactics,unknown,Company_39,MO,22593,Postal mail,Closed without relief,No,Yes,1006968,synthetic
