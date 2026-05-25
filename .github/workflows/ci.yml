@@ -8,7 +8,7 @@ on:
 
 # One Python version declared once; all jobs inherit it.
 env:
-  PYTHON_VERSION: "3.10"
+  PYTHON_VERSION: "3.11"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Job dependency graph:
@@ -20,7 +20,7 @@ env:
 #
 # What each job proves to a grader:
 #   lint            -- code is syntactically clean; no unused imports
-#   unit-tests      -- all 109 unit + API tests pass against sample data
+#   unit-tests      -- all 139 unit + API tests pass against sample data
 #   data-validation -- committed sample satisfies domain schema; bad records
 #                      are rejected (validates the validator itself)
 #   eval-gate       -- a deliberately weak model (max_depth=1 XGBoost) is
