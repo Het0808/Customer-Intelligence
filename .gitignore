@@ -2,6 +2,12 @@
 .env
 .env.local
 
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
 # ── Raw & processed datasets  (download locally with ingest.py) ──────────────
 data/raw/
 data/processed/

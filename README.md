@@ -2,7 +2,7 @@
 
 > **Production-grade bank campaign scoring + CFPB complaint intelligence in a single API — built end-to-end across seven phases from raw data to monitored deployment.**
 
-[![CI](https://github.com/<your-username>/customer-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-username>/customer-intelligence/actions/workflows/ci.yml)
+[![CI](https://github.com/Het0808/customer-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/Het0808/customer-intelligence/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Tests](https://img.shields.io/badge/tests-139%20passed-brightgreen)
 ![Coverage](https://img.shields.io/badge/coverage-FastAPI%20%7C%20features%20%7C%20RAG-informational)
@@ -51,7 +51,7 @@ The Customer Intelligence Platform combines two machine-learning pipelines into 
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-username>/customer-intelligence.git
+git clone https://github.com/Het0808/customer-intelligence.git
 cd customer-intelligence
 
 # 2. Install dependencies
@@ -260,7 +260,7 @@ flowchart TD
 ### Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/customer-intelligence.git
+git clone https://github.com/Het0808/customer-intelligence.git
 cd customer-intelligence
 ```
 
