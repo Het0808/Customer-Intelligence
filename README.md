@@ -814,6 +814,11 @@ MIT License — see `LICENSE` for details.
 
 ---
 
+## 👨‍💻 Author
+**Het Patel**
+
 <div align="center">
   <sub>Built for IIT Gandhinagar Week 13 Capstone — Customer Intelligence Platform</sub>
 </div>
+
+  
